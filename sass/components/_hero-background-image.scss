@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+.hero-background-image {
+  //   padding-block: $hero-padding;
+  //   padding-block: 30em;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-repeat: no-repeat;
+
+  .hero__inner {
+    display: flex;
+    flex-direction: column;
+    gap: $size-12;
+    padding-right: 5em;
+
+    @include mq(medium) {
+      padding-right: 25em;
+    }
+    @include mq(large) {
+      padding-right: 36em;
+    }
+  }
+}

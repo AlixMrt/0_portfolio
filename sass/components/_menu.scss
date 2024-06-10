@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+
+.menu {
+  //   background: black;
+
+  .heading-3 {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+.menu-title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.menu-menu {
+  //   display: grid;
+  //   gap: var(--grid-gap, 10em);
+  //   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+
+.individual-menu {
+  padding: 2em 0;
+
+  .heading-3 {
+    padding-bottom: 1em;
+  }
+}
+
+.menu_menu_items {
+  display: grid;
+  gap: 1em var(--grid-gap, 6em);
+  grid-template-columns: repeat(auto-fit, minmax(min(em, 100%), 1fr));
+}

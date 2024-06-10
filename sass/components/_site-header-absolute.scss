@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.header-absolute {
+  display: flex;
+  align-items: center;
+
+  justify-content: $site-header-absolute-justification-small-screens;
+  position: absolute;
+  inset: 0 0 auto;
+  padding: $site-header-absolute-padding;
+  margin: $site-header-absolute-margin;
+  color: white;
+  @include mq(medium) {
+    justify-content: $site-header-absolute-justification-large-screens;
+  }
+
+  & .nav {
+    gap: $size-1;
+    padding-top: 1em;
+    flex-direction: column;
+    text-align: center;
+
+    & a {
+      color: $site-header-absolute-color;
+
+      &:is(:hover, :focus) {
+        color: $site-header-absolute-link-color-hover;
+        text-decoration: underline;
+      }
+    }
+    @include mq(medium) {
+      flex-direction: row;
+      gap: $size-10;
+      padding-top: 0;
+    }
+  }
+}

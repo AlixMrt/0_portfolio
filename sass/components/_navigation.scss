@@ -2,9 +2,10 @@
 
 .nav {
   --flex-column-gap: #{$navigation-gap};
-  list-style: none;
-  font-family: $navigation-font-family;
+  font-size: $navigation-font-size;
   font-weight: $navigation-font-weight;
+  font-family: $navigation-font-family;
+  list-style: none;
 
   a {
     color: $navigation-color;

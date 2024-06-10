@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+.label {
+  display: grid;
+  gap: $label-flow-spacing;
+  padding: $label-padding;
+  background-color: $label-background-default;
+  font-family: $label-font-family;
+  color: $label-color;
+  line-height: $label-line-height;
+  box-shadow: $label-shadow;
+  border-radius: $label-border-radius;
+  overflow: hidden;
+
+  &__heading {
+    background-color: $color-accent-200;
+    width: 100%;
+    padding: 1em;
+    height: 3em;
+  }
+
+  p {
+    font-size: $label-paragraph-font-size;
+    color: $label-paragraph-color;
+    padding: 2em;
+  }
+}

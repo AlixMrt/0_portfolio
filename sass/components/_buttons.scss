@@ -15,23 +15,23 @@
   border-radius: $button-border-radius;
   transition: 275ms ease;
 
-  &[data-type="accent"] {
-    background-color: $button-accent-background;
-    color: $button-accent-color;
+  &[data-type="primary"] {
+    color: $button-primary-color;
+    background-color: $button-primary-background;
 
     &:is(:hover, :focus) {
-      background-color: $button-accent-background-hover;
-      color: $button-accent-color-hover;
+      color: $button-primary-color-hover;
+      background-color: $button-primary-background-hover;
     }
   }
 
-  &[data-type="primary"] {
-    background-color: $button-primary-background;
-    color: $button-primary-color;
+  &[data-type="accent"] {
+    color: $button-accent-color;
+    background-color: $button-accent-background;
 
     &:is(:hover, :focus) {
-      background-color: $button-primary-background-hover;
-      color: $button-primary-color-hover;
+      color: $button-accent-color-hover;
+      background-color: $button-accent-background-hover;
     }
   }
 }

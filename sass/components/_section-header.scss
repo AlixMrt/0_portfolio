@@ -1,0 +1,49 @@
+@use "../abstracts" as *;
+
+.section-header {
+  display: grid;
+  gap: $size-5;
+  margin-block-end: $size-10;
+  justify-items: center;
+
+  .heading-2 {
+    text-align: center;
+  }
+
+  p {
+    @include mq(medium) {
+      max-width: 36vw;
+      margin-inline: auto;
+    }
+  }
+
+  &[data-decoration="true"]::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 1px;
+    background-color: currentColor;
+    margin-block: $size-3;
+
+    .text-center & {
+      margin-inline: auto;
+    }
+  }
+}
+
+if we have a subtitle .section-header:has(p) {
+  margin-block-end: $size-8;
+
+  &[data-decoration="false"] {
+    margin-block-end: $size-10;
+  }
+}
+
+// if we don't have a subtitle
+.section-header:not(:has(p)) {
+  margin-block-end: $size-8;
+
+  &[data-decoration="false"] {
+    margin-block-end: $size-10;
+  }
+}

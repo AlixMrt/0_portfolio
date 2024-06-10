@@ -1,0 +1,63 @@
+@use "../abstracts" as *;
+
+.block-with-image {
+  .block-with-image-inner {
+    display: grid;
+    gap: 8em;
+  }
+
+  .full-height-column {
+    img {
+      object-fit: cover;
+      height: 30vh;
+      width: 90vw;
+      aspect-ratio: 1 / 1;
+      @include mq(medium) {
+        height: 100%;
+      }
+    }
+    padding-bottom: $size-8;
+    border-bottom: 1px solid black;
+
+    @include mq(medium) {
+      border-bottom: none;
+    }
+
+    &[data-position="right"] {
+      margin-bottom: calc($section-padding-block * -1);
+
+      @include mq(medium) {
+        height: calc(
+          (100% + $section-padding-block * 2) - var(--space-top-R, 0px) -
+            var(--space-bottom-R, 0px)
+        );
+
+        margin-top: calc($section-padding-block * -1);
+        transform: translateY(
+          calc(
+            (var(--space-top-R, 0px) * 0.5) + (var(--space-bottom-R, 0px) * 0)
+          )
+        );
+      }
+    }
+    &[data-position="left"] {
+      margin-bottom: calc($section-padding-block * -1);
+
+      @include mq(medium) {
+        margin-top: calc($section-padding-block * -1);
+
+        height: calc(
+          (100% + $section-padding-block * 2) - var(--space-top-L, 0px) -
+            var(--space-bottom-L, 0px)
+        );
+
+        margin-bottom: calc($section-padding-block * -1);
+        transform: translateY(
+          calc(
+            (var(--space-top-L, 0px) * 0.5) + (var(--space-bottom-L, 0px) * 0.5)
+          )
+        );
+      }
+    }
+  }
+}

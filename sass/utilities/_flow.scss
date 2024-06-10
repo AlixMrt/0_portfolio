@@ -1,3 +1,23 @@
+@use "../abstracts/" as *;
+
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-spacer, 1em);
+
+  @include mq(medium) {
+    margin-top: var(--flow-spacer, 3em);
+  }
+}
+.flow-small > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 0.5em);
+
+  @include mq(medium) {
+    margin-top: var(--flow-spacer, 1em);
+  }
+}
+.flow-big > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 2em);
+
+  @include mq(medium) {
+    margin-top: var(--flow-spacer, 5em);
+  }
 }

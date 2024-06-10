@@ -1,4 +1,37 @@
-.round {
+@use "../abstracts/" as *;
+
+.round-all {
   border-radius: 50%;
   aspect-ratio: 1 / 1;
+}
+
+.round-top {
+  border-radius: 5vw 5vw 2vw 2vw;
+
+  @include mq(medium) {
+    border-radius: 100vw 100vw 0 0;
+  }
+}
+.round-top-right {
+  border-radius: 0 20vw 0 0;
+}
+.round-top-left {
+  border-radius: 20vw 0 0 0;
+}
+.round-bottom {
+  border-radius: 0 0 100vw 100vw;
+}
+.round-bottom-right {
+  border-radius: 0 0 20vw 0vw;
+}
+.round-bottom-left {
+  border-radius: 0 0 0 20vw;
+}
+
+.round-right {
+  border-radius: 0 100vw 100vw 0;
+}
+
+.round-left {
+  border-radius: 100vw 0 0 100vw;
 }

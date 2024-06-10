@@ -1,17 +1,148 @@
 @use "../abstracts/" as *;
 
-.site-footer {
-  background-color: $footer-background-color;
-  color: $footer-text-color;
+// .site-footer {
+//   background-color: $footer-background-color;
+//   color: $footer-text-color;
+//   padding: $site-footer-padding;
+//   margin: $site-footer-margin;
 
-  a {
-    color: $footer-link-color;
-    text-decoration: $footer-link-text-decoration;
-    font-family: $footer-link-font-family;
-    letter-spacing: $letter-spacing-loose;
+//   a {
+//     color: $footer-link-color;
 
-    &:is(:hover, :focus) {
-      color: $footer-link-color-hover;
+//     text-decoration: $footer-link-text-decoration;
+//     font-family: $footer-link-font-family;
+//     letter-spacing: $letter-spacing-loose;
+
+//     &:is(:hover, :focus) {
+//       color: $footer-link-color-hover;
+//     }
+//   }
+// }
+
+.footer-main-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+
+  & > * {
+    margin-bottom: 2.5em;
+  }
+  @include mq(medium) {
+    flex-direction: row;
+    padding: 0 4em;
+  }
+
+  #border-bottom {
+    width: 60px;
+    height: 1px;
+    background-color: whitesmoke;
+    text-align: center;
+    margin: 0.6em auto;
+  }
+}
+
+.footer-address {
+  .address-inner {
+    text-align: center;
+    display: grid;
+    gap: 1em;
+  }
+
+  svg {
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-opening-hours {
+  text-align: center;
+
+  svg {
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .opening-hours-inner {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+
+    @include mq(medium) {
+      flex-direction: column;
+      gap: 1em;
     }
+    // @include mq(large) {
+    //   flex-direction: row;
+    // }
+
+    .no-margin {
+      margin: 0;
+    }
+  }
+}
+
+.footer-brand img:first-child {
+  width: 400px;
+}
+
+.footer-brand {
+  display: grid;
+  gap: 1em;
+  .social-media-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 10em;
+  }
+
+  .social-media-icons svg {
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+  .social-media-icons svg:hover {
+    color: gold;
+  }
+}
+
+.footer-opening-hours p:nth-child(2n + 1) {
+  margin-bottom: 1rem;
+}
+
+.footer-headtext {
+  font-family: var(--font-base);
+  color: var(--color-white);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-size: 32px;
+  line-height: 41.6px;
+  margin-bottom: 1rem;
+}
+
+.footer-copyright {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 2000px) {
+  .footer-headtext {
+    font-size: 51px;
+    line-height: 61.6px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer {
+    padding: 0 0 2rem 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .footer-brand img:first-child {
+    width: 80%;
   }
 }

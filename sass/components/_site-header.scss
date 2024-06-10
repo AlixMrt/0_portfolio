@@ -4,15 +4,20 @@
   color: $site-header-color;
   background-color: $site-header-background-color;
   padding: $site-header-padding;
+  margin: $site-header-margin;
 
   &__inner {
     display: flex;
     gap: $size-4;
     align-items: $site-header-alignment;
-    justify-content: $site-header-jusitifcation-small-screens;
+    justify-content: $site-header-justification-small-screens;
+
+    // &:is(:hover, :focus) {
+    //   color: $site-header-color-hover;
+    // }
 
     @include mq(medium) {
-      justify-content: $site-header-jusitifcation-large-screens;
+      justify-content: $site-header-justification-large-screens;
     }
   }
 }
