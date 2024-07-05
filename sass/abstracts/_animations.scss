@@ -1,0 +1,50 @@
+@media (prefers-reduced-motion: no-preference) {
+  .fading-img {
+    scale: 0.98;
+    opacity: 0.8;
+
+    animation: fade-in ease-in-out;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: 50px 40em;
+  }
+
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+}
+
+.fading-out {
+  opacity: 1;
+
+  animation: fade-out ease-in-out;
+  animation-fill-mode: forwards;
+  animation-timeline: view();
+  animation-range: exit 5em;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+.fading-out-image {
+  animation: header-image-animation ease-in-out;
+  animation-fill-mode: forwards;
+  animation-timeline: view();
+  animation-range: exit;
+  transform-origin: bottom;
+}
+@keyframes header-image-animation {
+  25% {
+    opacity: 1;
+  }
+  85%,
+  100% {
+    opacity: 0.4;
+  }
+}

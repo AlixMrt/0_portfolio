@@ -35,6 +35,13 @@ $box-shadow-4: 0px 6px 5px rgb(0, 0, 0, 0.03), 0px 22px 18px rgb(0, 0, 0, 0.042)
 $box-shadow-5: 0px 6px 5px rgb(0, 0, 0, 0.04), 0px 22px 18px rgb(0, 0, 0, 0.06),
   0px 100px 80px rgb(0, 0, 0, 0.1);
 
+$box-shadow-6: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+$box-shadow-7: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+$box-shadow-8: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 // body
 $body-font-family: $font-family-base;
 $body-font-size: $font-size-400;
@@ -51,19 +58,18 @@ $heading-color-default: $color-neutral-900;
 $heading-font-weight: $font-weight-bold;
 $heading-letter-spacing: $letter-spacing-loose;
 $heading-line-height: 1.1;
-$heading-text-transform: uppercase;
-
-$heading-1-font-size: $font-size-800;
+$heading-text-transform: none;
+$heading-1-font-size: $font-size-900;
 $heading-1-color: $heading-color-default;
-$heading-2-font-size: $font-size-700;
+$heading-2-font-size: $font-size-800;
 $heading-2-color: $heading-color-default;
-$heading-3-font-size: $font-size-600;
+$heading-3-font-size: $font-size-700;
 $heading-3-color: $heading-color-default;
-$heading-4-font-size: $font-size-500;
+$heading-4-font-size: $font-size-600;
 $heading-4-color: $heading-color-default;
 
 // layout
-$grid-gap: $size-6;
+$grid-gap: $size-10;
 $flex-group-gap: $size-4;
 
 $hero-padding-block: clamp(15rem, 15vh, 20rem);
@@ -75,38 +81,45 @@ $container-max-width-narrowest: 35rem;
 $container-max-width-narrow: 40rem;
 $container-max-width-regular: 60rem;
 $container-max-width-wide: 78rem;
-$container-max-width-widest: 88rem;
+$container-max-width-widest: 114rem;
 
 // site header
-$site-header-background-color: $color-primary-100;
+$site-header-background-color: $color-neutral-000;
 $site-header-color: $color-neutral-700;
 $site-header-color-hover: $color-primary-400;
-$site-header-padding: $size-7 0;
+$site-header-padding: $size-2 0;
 $site-header-margin: 0;
 $site-header-justification-small-screens: space-between;
 $site-header-justification-large-screens: space-between;
 $site-header-alignment: center;
 $site-header-justify-content: space-between;
+$site-header-logo-size: 5rem;
+$site-header-link-font-size: $font-size-500;
+$site-header-link-font-family: $font-family-accent;
 
 // site header absolute
 $site-header-absolute-background-color: transparent;
-$site-header-absolute-color: $color-neutral-100;
+$site-header-absolute-link-font-size: $font-size-600;
+$site-header-absolute-color: $color-neutral-900;
 $site-header-absolute-color-hover: $color-neutral-000;
-$site-header-absolute-padding: $size-7 0;
+$site-header-absolute-padding: $size-8 0;
 $site-header-absolute-margin: 0;
 $site-header-absolute-justification-small-screens: space-between;
 $site-header-absolute-justification-large-screens: space-between;
+$site-header-absolute-link-font-family: $font-family-accent;
 $site-header-absolute-link-color-hover: $color-neutral-200;
 
 // site footer
-$footer-background-color: $color-neutral-100;
-$footer-text-color: $color-neutral-900;
-$site-footer-padding: $size-7 0;
+$site-footer-padding: $size-11 0 $size-5 0;
 $site-footer-margin: 0;
+$footer-border-top: 2px solid white;
+$footer-background-color: $color-neutral-900;
+$footer-text-color: $color-neutral-100;
+$footer-text-copyright-color: $color-neutral-300;
 $footer-link-color: $color-neutral-900;
 $footer-link-color-hover: $color-primary-200;
 $footer-link-font-family: $font-family-base;
-$footer-link-text-decoration: none;
+$footer-social-media-link-hover-color: $color-primary-400;
 
 //navigation
 $navigation-color: $site-header-color;
@@ -165,8 +178,11 @@ $label-paragraph-color: $color-neutral-600;
 // menu
 
 // menu Item
-$menu-item-name-color: $color-accent-400;
-$menu-item-dash-color: $color-accent-400;
+$menu-item-name-color: $color-neutral-1000;
+$menu-item-font-weight: $font-weight-bold;
+$menu-item-font-family: $font-family-accent;
+$menu-item-font-size: $font-size-500;
+$menu-item-dash-color: $color-neutral-900;
 $menu-item-description-color: $color-neutral-500;
 
 // forms

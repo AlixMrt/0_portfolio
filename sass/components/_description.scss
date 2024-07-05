@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.description {
+  padding: 3em 0 3em 0;
+  .heading-3 {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 1em;
+  }
+  .paragraphs-container {
+    display: grid;
+    gap: 1.2em;
+  }
+}
