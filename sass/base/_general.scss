@@ -20,3 +20,29 @@ a {
 a:is(:hover, :focus) {
   color: $link-color-hover;
 }
+
+body {
+  display: grid;
+
+  grid-template-areas: "main" "footer" "nav";
+
+  // grid-template-rows: $site-side-navbar-width 85vw;
+
+  @include mq(large) {
+    grid-template-areas:
+      "nav main"
+      "nav footer";
+    grid-template-columns: $site-side-navbar-width 85vw;
+    justify-content: center;
+  }
+
+  // align-items: center;
+
+  main {
+    grid-area: main;
+  }
+
+  .site-footer {
+    grid-area: footer;
+  }
+}

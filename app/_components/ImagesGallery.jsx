@@ -1,15 +1,15 @@
 import Image from "next/image";
 import SectionHeader from "./SectionHeader";
 
-export default function ImagesGallery({ imagesArray }) {
+export default function ImagesGallery({ id, headingText, imagesArray }) {
   return (
     <section
-      id="gallery"
-      className="section | clr-neutral-900 bg-neutral-100 text-center"
+      id={id}
+      className="section navSection | clr-neutral-900 bg-neutral-000 text-center"
     >
       <div className="container" data-type="wide">
         <SectionHeader
-          headingText="Gallerie Photo"
+          headingText={headingText}
           headingColor="clr-neutral-900"
         />
 

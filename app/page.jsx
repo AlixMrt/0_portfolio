@@ -1,3 +1,5 @@
+"use client";
+
 // Components
 import Description from "./_components/Description";
 import HeroBackgroundImage from "./_components/HeroBackgroundImage";
@@ -5,11 +7,14 @@ import Menu from "./_components/Menu";
 import ImagesGallery from "./_components/ImagesGallery";
 import Slider from "./_components/Slider";
 import HeaderElementary from "./_components/HeaderElementary";
-
+import SideNavbar from "./_components/SideNavbar";
 import bgImg from "../public/images/background5.jpg";
 
 // Data
-import data from "../data/data";
+// import data from "../data/data";
+import dataEn from "../data/data-en";
+import dataFr from "../data/data-fr";
+
 import MenuWindowed from "./_components/MenuWindowed";
 import Hero from "./_components/Hero";
 import HeroElementary from "./_components/HeroElementary";
@@ -19,6 +24,9 @@ import EssaiOrnaments from "./_components/EssaiOrnaments";
 import FindUs from "./_components/FindUs";
 import DescriptionOld from "./_components/DescriptionOld";
 import SectionHeader from "./_components/SectionHeader";
+import { useEffect, useState } from "react";
+import AboutUs from "./_components/AboutUs";
+import Footer from "./_components/Footer";
 
 export default function Home() {
   const languagesButtons = [
@@ -26,19 +34,69 @@ export default function Home() {
     { id: 2, name: " French" },
   ];
 
+  const [activeSection, setActiveSection] = useState("section1");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll(".navSection");
+      let index = sections.length;
+
+      while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+      setActiveSection(sections[index].id);
+      // console.log(activeSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const [data, setData] = useState(dataFr);
+  const [currentLanguage, setCurrentLanguage] = useState("french");
+
+  const handleLanguageStateChange = (languageValue) => {
+    if (languageValue === "french") {
+      setData(dataFr);
+      setCurrentLanguage("french");
+      console.log(currentLanguage);
+    } else if (languageValue === "english") {
+      setData(dataEn);
+      setCurrentLanguage("english");
+      console.log(currentLanguage);
+    }
+  };
+
+  // const sideNavLinks = [
+  //   // { name: "Accueil", hrefTarget: "#section1", hrefTargetName: "section1" },
+  //   { name: "Menu", hrefTarget: "#section2", hrefTargetName: "section2" },
+  //   {
+  //     name: "About us",
+  //     hrefTarget: "#section3",
+  //     hrefTargetName: "section3",
+  //   },
+  //   { name: "Gallerie", hrefTarget: "#section4", hrefTargetName: "section4" },
+  //   { name: "Contact", hrefTarget: "#section5", hrefTargetName: "section5" },
+  // ];
+
   return (
-    <main>
-      {/* <HeroBackgroundImage
-        mainHeading="La Belle Table"
+    <>
+      <SideNavbar
+        sideNavLinks={data.sideNavLinks}
+        activeSection={activeSection}
+      />
+      <main>
+        {/* <HeroBackgroundImage
+        mainHeading="Au Vieux Chêne"
         secondaryHeading="Restaurant gastronomique à Fontainebleau"
         decorationImgSrc="svg/text-divider-4.svg"
         bgImage={bgImg}
       /> */}
-      {/* <Hero
+        {/* <Hero
         heroPadding={""}
         columnLayout="even-columns"
         heroBackgroundColor={"bg-neutral-000"}
-        heroHeadingText="La Belle Table"
+        heroHeadingText="Au Vieux Chêne"
         heroSubHeadingText="Restaurant gastronomique à Fontainebleau"
         heroText=""
         imageSrc="/images/find-us2.jpg"
@@ -46,57 +104,57 @@ export default function Home() {
         imageBorderRadius=""
         imageBoxShadow="box-shadow-8"
       /> */}
-      <HeaderElementary languagesButtons={languagesButtons} />
-      <HeroElementary
-        columnLayout="even-columns"
-        heroBackgroundColor={"bg-neutral-000"}
-        heroHeadingText="La Belle Table"
-        heroSecondaryHeadingText="Restaurant Gastronomique à Fontainebleau"
-        // heroTertiaryHeadingText="Restaurant"
-        imageSrc="/svg/silhouettes1.svg"
-        imageDescription="two children holding hands"
-      />
-      <FindUs
-        street="46 rue de Bourgogne"
-        city="Fontainebleau"
-        phoneNumber="01 46 37 28 36"
-        email="BelleTable@contact.com"
-        openingTimeSlotArray={data.openingTimeSlotsArray}
-        display="vertical"
-      />
-      <MenuWindowed dishesArray={data.dishesArray} />
-      {/* <OurStory /> */}
-      <SectionHeader
-        headingText="Notre Histoire"
-        marginBlockEnd="0"
-        displayDecoration
-      />
+        <div id="section1" className="navSection">
+          {/* <HeaderElementary languagesButtons={languagesButtons} /> */}
+          <HeroElementary
+            columnLayout="even-columns"
+            heroBackgroundColor={"bg-neutral-000"}
+            heroHeadingText={data.pageHeading.pageTitle}
+            heroSecondaryHeadingText={data.pageHeading.pageSubtitle}
+            // heroTertiaryHeadingText="Restaurant"
+            imageSrc={data.pageHeading.imageLink}
+            imageDescription={data.pageHeading.imageDescription}
+            handleLanguageClick={handleLanguageStateChange}
+            activeLanguage={currentLanguage}
+          />
+        </div>
 
-      <Description
-        descriptionHeadingText="Le bateau"
-        fontColor="clr-neutral-1000"
-        findUsBgColor="bg-neutral-000"
-        findUsInnerBgColor="bg-neutral-000"
-        imageLink="/images/salle-restaurant.png"
-        imageDescription="a photo of our restaurant with table and chairs"
-        imagePosition="left"
-        data={data.descriptionArray.restaurant}
-      />
-      <Description
-        descriptionHeadingText="Le Chef"
-        fontColor="clr-neutral-1000"
-        findUsBgColor="bg-neutral-000"
-        findUsInnerBgColor="bg-neutral-000"
-        imageLink="/images/chef.png"
-        imageDescription="a photo of our restaurant with table and chairs"
-        imagePosition="right"
-        data={data.descriptionArray.chef}
-      />
-      <ImagesGallery imagesArray={data.imagesArray} />
-      {/* <Menu dishesArray={data.dishesArray} /> */}
+        <MenuWindowed
+          id="section2"
+          headingText={data.sideNavLinks[0].name}
+          dishesArray={data.dishesArray}
+          dishesCategoriesArray={data.dishesCategoriesArray}
+        />
+        {/* <OurStory /> */}
 
-      {/* <Slider imagesArray={data.imagesArray} /> */}
-      {/* <EssaiOrnaments /> */}
-    </main>
+        <AboutUs
+          id="section3"
+          headingText={data.sideNavLinks[1].name}
+          aboutUsData={data.descriptionArray}
+        />
+
+        <ImagesGallery
+          id="section4"
+          headingText={data.sideNavLinks[2].name}
+          imagesArray={data.imagesArray}
+        />
+        {/* <Menu dishesArray={data.dishesArray} /> */}
+
+        <FindUs
+          id="section5"
+          // street="46 rue de Bourgogne"
+          // city="Fontainebleau"
+          // phoneNumber="01 46 37 28 36"
+          // email="LeVieuxChene@contact.com"
+          headingText={data.sideNavLinks[3].name}
+          findUsData={data.findUs}
+          openingTimeSlotArray={data.openingTimeSlotsArray}
+          display="horizontal"
+        />
+        {/* <Slider imagesArray={data.imagesArray} /> */}
+        {/* <EssaiOrnaments /> */}
+      </main>
+      <Footer />
+    </>
   );
 }

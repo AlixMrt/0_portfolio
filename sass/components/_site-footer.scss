@@ -3,6 +3,7 @@
 .site-footer {
   background-color: $footer-background-color;
   color: $footer-text-color;
+  color: $footer-text-color;
   border-top: $footer-border-top;
   padding: $site-footer-padding;
   margin: $site-footer-margin;
@@ -37,7 +38,8 @@
 
     h2 {
       text-align: center;
-      color: $footer-text-color;
+      // color: $footer-text-color;
+      color: goldenrod;
     }
 
     .social-media-icons {
@@ -53,7 +55,8 @@
     }
 
     .social-media-icons svg:hover {
-      color: $footer-social-media-link-hover-color;
+      // color: $footer-social-media-link-hover-color;
+      color: goldenrod;
     }
   }
 

@@ -6,22 +6,30 @@ import MenuItem1 from "./menuItem-1";
 import MenuItem2 from "./menuItem-2";
 import MenuItem3 from "./menuItem-3";
 
-export default function MenuWindowed({ dishesArray }) {
+export default function MenuWindowed({
+  id,
+  headingText,
+  dishesArray,
+  dishesCategoriesArray,
+}) {
   const { Entrées, Plats, Desserts, Vins } = dishesArray;
 
   const dishCategories = [
-    { name: "Entrées" },
-    { name: "Plats" },
-    { name: "Desserts" },
-    { name: "Vins" },
+    { name: dishesCategoriesArray[0] },
+    { name: dishesCategoriesArray[1] },
+    { name: dishesCategoriesArray[2] },
+    { name: dishesCategoriesArray[3] },
   ];
 
   const [displayedDishCategory, setDisplayedDishCategory] = useState("Entrées");
 
   return (
-    <section className="section | menu-windowed bg-neutral-000">
+    <section
+      id={id}
+      className="section navSection | menu-windowed bg-neutral-000"
+    >
       <div className="container" data-type="regular">
-        <SectionHeader headingText="Menu" displayDecoration />
+        <SectionHeader headingText={headingText} displayDecoration />
 
         <ul className="menu-windowed-links ">
           {dishCategories.map((category, index) => {
@@ -43,13 +51,13 @@ export default function MenuWindowed({ dishesArray }) {
             <h3 className="heading-3">{displayedDishCategory}</h3>
             <div className="menu-windowed-divider"></div>
             <div className="menu_menu_items">
-              {dishesArray[displayedDishCategory].map((starter, index) => (
+              {dishesArray[displayedDishCategory].map((item, index) => (
                 <MenuItem2
-                  key={starter.name + index}
-                  name={starter.name}
-                  price={starter.price}
-                  description={starter.description}
-                  isVegetarian={starter.isVegetarian}
+                  key={item.name + index}
+                  name={item.name}
+                  price={item.price}
+                  description={item.description}
+                  isVegetarian={item.isVegetarian}
                 />
               ))}
             </div>

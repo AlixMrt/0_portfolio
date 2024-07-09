@@ -3,22 +3,25 @@ import SectionHeader from "./SectionHeader";
 import BlockWithImage from "./BlockWithImage";
 
 export default function Description({
-  descriptionHeadingText,
+  // descriptionHeadingText,
   fontColor,
   findUsBgColor,
   findUsInnerBgColor,
-  imageLink,
-  imageDescription,
+  // imageLink,
+  // imageDescription,
   imageStyling,
   imagePosition,
-  data,
+  descriptionData,
 }) {
+  const { headingText, paragraphsArray, imageDescription, imageLink } =
+    descriptionData;
+
   return (
     <section className={`description |  clr-neutral-000 ${findUsBgColor}`}>
       <div className={`container`} data-type="wide">
         <BlockWithImage
           backgroundColor={findUsInnerBgColor}
-          imageSrc={imageLink}
+          imageSrc={`/images/${imageLink}`}
           imageDescription={imageDescription}
           imageStyling={imageStyling}
           imagePosition={imagePosition}
@@ -26,15 +29,11 @@ export default function Description({
           borderBottom="border-bottom"
         >
           <div>
-            <h3 className={`heading-3 | ${fontColor}`}>
-              {descriptionHeadingText}
-            </h3>
+            <h3 className={`heading-3 | ${fontColor}`}>{headingText}</h3>
             <div className="paragraphs-container">
-              {data.map((paragraph) => {
+              {paragraphsArray.map((paragraph) => {
                 return (
-                  <p className={`paragraph | ${fontColor}`}>
-                    {paragraph.paragraph}
-                  </p>
+                  <p className={`paragraph | ${fontColor}`}>{paragraph}</p>
                 );
               })}
             </div>

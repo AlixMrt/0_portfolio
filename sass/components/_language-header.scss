@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+
+.language-header {
+  position: absolute;
+  top: 2%;
+  right: 4%;
+  // background-color: red;
+  //   padding: 0.4em;
+
+  display: flex;
+  gap: 2px;
+  align-items: center;
+
+  a {
+    color: black;
+    // padding: 5em;
+    // border: 1px solid black;
+    padding: 10px;
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+      color: goldenrod;
+      font-weight: 800;
+    }
+
+    &.active-language {
+      color: goldenrod;
+      font-weight: 800;
+    }
+  }
+}

@@ -6,6 +6,10 @@
   display: grid;
   gap: 0.5em;
 
+  h1 {
+    color: goldenrod;
+  }
+
   .sub-headings {
     display: grid;
     padding: 1em;
@@ -13,6 +17,7 @@
 
     h2 {
       font-weight: 500;
+      color: #6d5312;
     }
   }
 }

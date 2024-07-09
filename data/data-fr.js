@@ -10,16 +10,20 @@ const data = {
     },
   ],
 
-  newSideNavLinks: [
+  sideNavLinks: [
     // { name: "Accueil", hrefTarget: "#section1", hrefTargetName: "section1" },
     { name: "Menu", hrefTarget: "#section2", hrefTargetName: "section2" },
     {
-      name: "About us",
+      name: "À propos",
       hrefTarget: "#section3",
       hrefTargetName: "section3",
     },
     { name: "Gallerie", hrefTarget: "#section4", hrefTargetName: "section4" },
-    { name: "Contact", hrefTarget: "#section5", hrefTargetName: "section5" },
+    {
+      name: "Nous trouver",
+      hrefTarget: "#section5",
+      hrefTargetName: "section5",
+    },
   ],
 
   pageHeading: {

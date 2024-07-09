@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <div className="container center-children" data-type="wide">
+      <div className="container center-children" data-type="full-bleed">
         <div className="footer-brand | center-children mx-auto">
           {/* <Link href="/">
             <Image
@@ -19,7 +19,7 @@ export default function Footer() {
             />
           </Link> */}
           <div>
-            <h2 className="heading-1">La Belle Table</h2>
+            <h2 className="heading-1">Au Vieux Chêne</h2>
           </div>
 
           <div className="social-media-icons">
@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-copyright ">
-          <p>2024 La Belle Table. All Rights reserved.</p>
+          <p>2024 Au Vieux Chêne. All Rights reserved.</p>
         </div>
       </div>
     </footer>

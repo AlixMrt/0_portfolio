@@ -51,18 +51,16 @@
     padding: 0.3em 1em;
     border: 1px solid grey;
     font-family: $font-family-accent;
-
+    align-self: center;
     &:hover {
       color: white;
       background-color: black;
-      border: 1px solid grey;
     }
   }
 
   .active-link {
     color: white;
     background-color: black;
-    border: 1px solid grey;
   }
 
   .menu-menu .individual-menu {

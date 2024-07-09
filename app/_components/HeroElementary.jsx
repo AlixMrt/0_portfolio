@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PageHeading from "./PageHeading";
 import flowerImage from "/public/svg/fleur.svg";
+import LanguageHeader from "./LanguageHeader";
 export default function HeroElementary({
   heroPadding,
   heroBackgroundColor,
@@ -10,9 +11,16 @@ export default function HeroElementary({
   heroText,
   imageSrc,
   imageDescription,
+  handleLanguageClick,
+  activeLanguage,
 }) {
   return (
     <section className={`hero-elementary | ${heroBackgroundColor} `}>
+      <LanguageHeader
+        handleLanguageClick={handleLanguageClick}
+        activeLanguage={activeLanguage}
+      />
+
       <div className="container | hero-elementary-container" data-type="narrow">
         <div className="content-container box-shadow-8">
           <Image

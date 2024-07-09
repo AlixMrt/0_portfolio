@@ -109,11 +109,19 @@ $site-header-absolute-justification-large-screens: space-between;
 $site-header-absolute-link-font-family: $font-family-accent;
 $site-header-absolute-link-color-hover: $color-neutral-200;
 
+// site side-navbar
+//
+// Large Screen Width
+$site-side-navbar-width: 15vw;
+
+// Small Screens Height
+$site-side-navbar-height: 12vh;
+
 // site footer
 $site-footer-padding: $size-11 0 $size-5 0;
 $site-footer-margin: 0;
 $footer-border-top: 2px solid white;
-$footer-background-color: $color-neutral-900;
+$footer-background-color: $color-neutral-1000;
 $footer-text-color: $color-neutral-100;
 $footer-text-copyright-color: $color-neutral-300;
 $footer-link-color: $color-neutral-900;

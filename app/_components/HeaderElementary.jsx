@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function HeaderAbsolute({ languagesButtons }) {
+export default function HeaderAbsolute({ id, languagesButtons }) {
   return (
-    <header className="header-elementary " data-type="widest">
+    <header id={id} className="header-elementary " data-type="widest">
       <nav>
         <ul className="elementary--nav">
           <li>

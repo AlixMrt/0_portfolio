@@ -11,9 +11,7 @@ export default function PageHeading({
       className=" page-heading |  hero__inner container center-children fading-out"
       data-type="widest"
     >
-      <h1 className="heading-1 | clr-neutral-1000 text-center">
-        {mainHeading}
-      </h1>
+      <h1 className="heading-1 |  text-center">{mainHeading}</h1>
       <div className="sub-headings">
         <h2 className="heading-2 clr-neutral-1000 ff-base fs-600 text-center">
           {secondaryHeading}
