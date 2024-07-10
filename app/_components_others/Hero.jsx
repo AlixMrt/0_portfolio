@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PageHeading from "./PageHeading";
+import PageHeading from "../_components/PageHeading";
 
 export default function Hero({
   columnLayout,
@@ -17,16 +17,8 @@ export default function Hero({
     <section
       className={`hero |  section ${heroBackgroundColor} ${heroPadding} mx-auto `}
     >
-      <div className="container" data-type="narrow">
+      <div className="container" data-type="wide">
         <div className={`${columnLayout}`}>
-          <div className="content-container ">
-            <PageHeading
-              mainHeading={heroHeadingText}
-              secondaryHeading={heroSubHeadingText}
-              decorationImgSrc="/svg/text-divider-4.svg"
-            />
-            <p className="text-center">{heroText}</p>
-          </div>
           <div className="image-container">
             <Image
               className={`hero__image | ${imageBorderRadius}  ${imageBoxShadow}`}
@@ -36,6 +28,14 @@ export default function Hero({
               height="500"
               priority
             />
+          </div>
+          <div className="content-container ">
+            <PageHeading
+              mainHeading={heroHeadingText}
+              secondaryHeading={heroSubHeadingText}
+              decorationImgSrc="/svg/text-divider-4.svg"
+            />
+            <p className="text-center">{heroText}</p>
           </div>
         </div>
       </div>

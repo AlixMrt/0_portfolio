@@ -1,14 +1,15 @@
 const data = {
-  openingTimeSlotsArray: [
-    {
-      days: "Du Mardi au Vendredi",
-      hours: "de 11h à 13h puis de 18h à 22h",
-    },
-    {
-      days: "Samedi & Dimanche",
-      hours: "de 17h à 22h",
-    },
-  ],
+  pageHeading: {
+    pageTitle: "Au Vieux Chêne",
+    pageSubtitle: "Restaurant Gastronomique à Fontainebleau",
+    imageDescription: "logo d'un vieux chêne, arbre symbole du restaurant",
+    imageLink: "/svg/tree.svg",
+  },
+
+  languagesButtons: {
+    language1: "french",
+    language2: "english",
+  },
 
   sideNavLinks: [
     // { name: "Accueil", hrefTarget: "#section1", hrefTargetName: "section1" },
@@ -25,13 +26,6 @@ const data = {
       hrefTargetName: "section5",
     },
   ],
-
-  pageHeading: {
-    pageTitle: "Au Vieux Chêne",
-    pageSubtitle: "Restaurant Gastronomique à Fontainebleau",
-    imageDescription: "logo d'un vieux chêne, arbre symbole du restaurant",
-    imageLink: "/svg/tree.svg",
-  },
 
   descriptionArray: {
     restaurant: {
@@ -55,13 +49,6 @@ const data = {
         "a photo of the chef Jean-Pierre Dubois standing in his kitchen",
       imageLink: "chef.png",
     },
-  },
-
-  findUs: {
-    street: "46 rue de Bourgogne",
-    city: "Fontainebleau",
-    phoneNumber: "01 46 37 28 36",
-    email: "LeVieuxChene@contact.com",
   },
 
   dishesCategoriesArray: [["Entrées"], ["Plats"], ["Desserts"], ["Vins"]],
@@ -229,6 +216,24 @@ const data = {
       category: "Entrée",
       description: "Amandes grillées & Vanille",
       number: 6,
+    },
+  ],
+
+  findUs: {
+    street: "46 rue de Bourgogne",
+    city: "Fontainebleau",
+    phoneNumber: "01 46 37 28 36",
+    email: "LeVieuxChene@contact.com",
+  },
+
+  openingTimeSlotsArray: [
+    {
+      days: "Mardi au Vendredi",
+      hours: "de 11h à 13h & de 18h à 22h",
+    },
+    {
+      days: "Samedi & Dimanche",
+      hours: "de 17h à 22h",
     },
   ],
 };

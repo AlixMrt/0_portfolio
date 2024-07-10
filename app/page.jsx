@@ -2,38 +2,28 @@
 
 // Components
 import Description from "./_components/Description";
-import HeroBackgroundImage from "./_components/HeroBackgroundImage";
+import HeroBackgroundImage from "./_components_others/HeroBackgroundImage";
 import Menu from "./_components/Menu";
 import ImagesGallery from "./_components/ImagesGallery";
-import Slider from "./_components/Slider";
 import HeaderElementary from "./_components/HeaderElementary";
 import SideNavbar from "./_components/SideNavbar";
 import bgImg from "../public/images/background5.jpg";
 
 // Data
-// import data from "../data/data";
 import dataEn from "../data/data-en";
 import dataFr from "../data/data-fr";
 
 import MenuWindowed from "./_components/MenuWindowed";
-import Hero from "./_components/Hero";
+import Hero from "./_components_others/Hero";
 import HeroElementary from "./_components/HeroElementary";
-import Hours from "./_components/Hours";
-import OurStory from "./_components/OurStory";
-import EssaiOrnaments from "./_components/EssaiOrnaments";
-import FindUs from "./_components/FindUs";
-import DescriptionOld from "./_components/DescriptionOld";
+import FindUsHorizontal from "./_components/FindUsHorizontal";
+import FindUsVertical from "./_components/FindUsVertical";
 import SectionHeader from "./_components/SectionHeader";
 import { useEffect, useState } from "react";
 import AboutUs from "./_components/AboutUs";
 import Footer from "./_components/Footer";
 
 export default function Home() {
-  const languagesButtons = [
-    { id: 1, name: "English /" },
-    { id: 2, name: " French" },
-  ];
-
   const [activeSection, setActiveSection] = useState("section1");
 
   useEffect(() => {
@@ -43,7 +33,6 @@ export default function Home() {
 
       while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
       setActiveSection(sections[index].id);
-      // console.log(activeSection);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -59,11 +48,9 @@ export default function Home() {
     if (languageValue === "french") {
       setData(dataFr);
       setCurrentLanguage("french");
-      console.log(currentLanguage);
     } else if (languageValue === "english") {
       setData(dataEn);
       setCurrentLanguage("english");
-      console.log(currentLanguage);
     }
   };
 
@@ -75,23 +62,24 @@ export default function Home() {
       />
       <main>
         {/* <HeroBackgroundImage
-        mainHeading="Au Vieux Chêne"
-        secondaryHeading="Restaurant gastronomique à Fontainebleau"
-        decorationImgSrc="svg/text-divider-4.svg"
-        bgImage={bgImg}
-      /> */}
-        {/* <Hero
-        heroPadding={""}
-        columnLayout="even-columns"
-        heroBackgroundColor={"bg-neutral-000"}
-        heroHeadingText="Au Vieux Chêne"
-        heroSubHeadingText="Restaurant gastronomique à Fontainebleau"
-        heroText=""
-        imageSrc="/images/find-us2.jpg"
-        imageDescription="two children holding hands"
-        imageBorderRadius=""
-        imageBoxShadow="box-shadow-8"
-      /> */}
+          mainHeading="Au Vieux Chêne"
+          secondaryHeading="Restaurant gastronomique à Fontainebleau"
+          decorationImgSrc="svg/text-divider-4.svg"
+          bgImage={bgImg}
+        />
+        <Hero
+          heroPadding={""}
+          columnLayout="even-columns"
+          heroBackgroundColor={"bg-neutral-000"}
+          heroHeadingText="Au Vieux Chêne"
+          heroSubHeadingText="Restaurant gastronomique à Fontainebleau"
+          heroText=""
+          imageSrc="/images/find-us2.jpg"
+          imageDescription="two children holding hands"
+          imageBorderRadius=""
+          imageBoxShadow="box-shadow-8"
+        /> */}
+
         <div id="section1" className="navSection">
           <HeroElementary
             columnLayout="even-columns"
@@ -101,17 +89,16 @@ export default function Home() {
             imageSrc={data.pageHeading.imageLink}
             imageDescription={data.pageHeading.imageDescription}
             handleLanguageClick={handleLanguageStateChange}
+            languagesButtons={data.languagesButtons}
             activeLanguage={currentLanguage}
           />
         </div>
-
         <MenuWindowed
           id="section2"
           headingText={data.sideNavLinks[0].name}
           dishesArray={data.dishesArray}
           dishesCategoriesArray={data.dishesCategoriesArray}
         />
-        {/* <OurStory /> */}
 
         <AboutUs
           id="section3"
@@ -125,20 +112,35 @@ export default function Home() {
           imagesArray={data.imagesArray}
         />
         {/* <Menu dishesArray={data.dishesArray} /> */}
-
-        <FindUs
+        {/* 
+        <FindUsHorizontal
           id="section5"
-          // street="46 rue de Bourgogne"
-          // city="Fontainebleau"
-          // phoneNumber="01 46 37 28 36"
-          // email="LeVieuxChene@contact.com"
+          data={data}
           headingText={data.sideNavLinks[3].name}
           findUsData={data.findUs}
           openingTimeSlotArray={data.openingTimeSlotsArray}
-          display="horizontal"
+        /> */}
+        {/* <FindUsVertical
+          id="section5"
+          data={data}
+          headingText={data.sideNavLinks[3].name}
+          findUsData={data.findUs}
+          openingTimeSlotArray={data.openingTimeSlotsArray}
+        /> */}
+        <FindUsVertical
+          id="section5"
+          data={data}
+          headingText={data.sideNavLinks[3].name}
+          findUsData={data.findUs}
+          openingTimeSlotArray={data.openingTimeSlotsArray}
         />
-        {/* <Slider imagesArray={data.imagesArray} /> */}
-        {/* <EssaiOrnaments /> */}
+        <FindUsHorizontal
+          id="section5"
+          data={data}
+          headingText={data.sideNavLinks[3].name}
+          findUsData={data.findUs}
+          openingTimeSlotArray={data.openingTimeSlotsArray}
+        />
       </main>
       <Footer />
     </>

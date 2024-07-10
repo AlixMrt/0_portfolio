@@ -3,30 +3,19 @@ import { IoLocationOutline } from "react-icons/io5";
 import { GoClock } from "react-icons/go";
 import Image from "next/image";
 import Link from "next/link";
+import SectionHeader from "./SectionHeader";
 
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container center-children" data-type="full-bleed">
         <div className="footer-brand | center-children mx-auto">
-          {/* <Link href="/">
-            <Image
-              src={"logo/logo-3.svg"}
-              height={100}
-              width={100}
-              className="logo | mx-auto"
-              alt="logo of the website in the footer"
+          <Link href="/">
+            <SectionHeader
+              headingText={"Au Vieux Chêne"}
+              headingColor="clr-neutral-000"
             />
-          </Link> */}
-          <div>
-            <h2 className="heading-1">Au Vieux Chêne</h2>
-          </div>
-
-          <div className="social-media-icons">
-            <FiFacebook />
-            <FiTwitter />
-            <FiInstagram />
-          </div>
+          </Link>
         </div>
 
         <div className="footer-copyright ">

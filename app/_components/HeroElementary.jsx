@@ -12,12 +12,14 @@ export default function HeroElementary({
   imageDescription,
   handleLanguageClick,
   activeLanguage,
+  languagesButtons,
 }) {
   return (
     <section className={`hero-elementary | ${heroBackgroundColor} `}>
       <LanguageHeader
         handleLanguageClick={handleLanguageClick}
         activeLanguage={activeLanguage}
+        languagesButtons={languagesButtons}
       />
 
       <div className="container | hero-elementary-container" data-type="narrow">

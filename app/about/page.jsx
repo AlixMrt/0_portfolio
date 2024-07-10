@@ -1,11 +1,11 @@
-import Hero from "../_components/Hero";
-import HeroBackgroundImage from "../_components/HeroBackgroundImage";
+import Hero from "../_components_others/Hero";
+import HeroBackgroundImage from "../_components_others/HeroBackgroundImage";
 
 import BlockWithImage from "../_components/BlockWithImage";
 import FindUs from "../_components/Description";
 
 import data from "@/data/data";
-import EssaiOrnaments from "../_components/EssaiOrnaments";
+import EssaiOrnaments from "../_components_others/EssaiOrnaments";
 
 export default function AboutPage() {
   return (

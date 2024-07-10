@@ -1,4 +1,4 @@
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "../_components/SectionHeader";
 
 export default function Hours() {
   const timetableArray = [

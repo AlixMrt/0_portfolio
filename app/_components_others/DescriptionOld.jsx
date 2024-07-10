@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "../_components/SectionHeader";
 
 export default function DescriptionOld() {
   const descriptionsArray = [
@@ -26,11 +26,7 @@ export default function DescriptionOld() {
   return (
     <section className="section | bg-neutral-000 text-center">
       <div className="container">
-        <SectionHeader
-          headingText="Nous faisons de la super nourriture!"
-          subtitleText={`La cuisine est notre passion, avec la qualité et la fraîcheur étant d'une importance capitale.`}
-          subtitleUppercase
-        />
+        <SectionHeader headingText="Nous faisons de la super nourriture!" />
 
         <div className="grid-auto-fit">
           {descriptionsArray.map((description, index) => {

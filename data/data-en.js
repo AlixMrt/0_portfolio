@@ -1,14 +1,8 @@
 const data = {
-  openingTimeSlotsArray: [
-    {
-      days: "From Tuesday au Friday",
-      hours: "de 11 AM à 2 PM & from 6 PM to 10 PM",
-    },
-    {
-      days: "Saturday & Sunday",
-      hours: "from 5 PM à 10 PM",
-    },
-  ],
+  languagesButtons: {
+    language1: "french",
+    language2: "english",
+  },
 
   sideNavLinks: [
     // { name: "Accueil", hrefTarget: "#section1", hrefTargetName: "section1" },
@@ -59,6 +53,17 @@ const data = {
     phoneNumber: "01 46 37 28 36",
     email: "LeVieuxChene@contact.com",
   },
+
+  openingTimeSlotsArray: [
+    {
+      days: "Tuesday to Friday",
+      hours: "from 11 AM to 2 PM & from 6 PM to 10 PM",
+    },
+    {
+      days: "Saturday & Sunday",
+      hours: "from 5 PM to 10 PM",
+    },
+  ],
 
   dishesCategoriesArray: [["Entrées"], ["Plats"], ["Desserts"], ["Vins"]],
 

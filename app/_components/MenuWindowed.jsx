@@ -4,7 +4,6 @@ import { useState } from "react";
 import SectionHeader from "./SectionHeader";
 import MenuItem1 from "./menuItem-1";
 import MenuItem2 from "./menuItem-2";
-import MenuItem3 from "./menuItem-3";
 
 export default function MenuWindowed({
   id,

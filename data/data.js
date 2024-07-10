@@ -10,6 +10,11 @@ const data = {
     },
   ],
 
+  languagesButtons: {
+    language1: "french",
+    language2: "english",
+  },
+
   newSideNavLinks: [
     // { name: "Accueil", hrefTarget: "#section1", hrefTargetName: "section1" },
     { name: "Menu", hrefTarget: "#section2", hrefTargetName: "section2" },

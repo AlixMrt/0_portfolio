@@ -22,40 +22,14 @@
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
-
-    & > * {
-      margin-bottom: 2.5em;
-    }
-    @include mq(medium) {
-      flex-direction: row;
-      padding: 0 4em;
-    }
   }
 
   .footer-brand {
     display: grid;
-    gap: 1em;
 
     h2 {
       text-align: center;
       // color: $footer-text-color;
-      color: goldenrod;
-    }
-
-    .social-media-icons {
-      margin: 2em auto;
-      display: flex;
-      justify-content: space-between;
-      width: 10em;
-    }
-
-    .social-media-icons svg {
-      font-size: 35px;
-      cursor: pointer;
-    }
-
-    .social-media-icons svg:hover {
-      // color: $footer-social-media-link-hover-color;
       color: goldenrod;
     }
   }
@@ -65,5 +39,10 @@
       color: $footer-text-copyright-color;
       text-align: center;
     }
+  }
+
+  .rotate-svg {
+    filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(5202%)
+      hue-rotate(346deg) brightness(91%) contrast(87%);
   }
 }

@@ -3,9 +3,6 @@ import Image from "next/image";
 export default function SectionHeader({
   headingText,
   headingColor,
-  subtitleText,
-  subtitleColor,
-  subtitleUppercase,
   displayDecoration,
   decorationColor,
   marginBlockEnd = "10",
@@ -24,16 +21,6 @@ export default function SectionHeader({
         className="rotate-svg"
         alt="ornemental decoration for a section"
       />
-
-      {subtitleText ? (
-        <p
-          className={`fs-500  ${
-            subtitleUppercase ? "uppercase" : ""
-          }  ${subtitleColor}`}
-        >
-          {subtitleText}
-        </p>
-      ) : null}
     </div>
   );
 }

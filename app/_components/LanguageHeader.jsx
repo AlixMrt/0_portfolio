@@ -3,6 +3,7 @@ import React from "react";
 export default function LanguageHeader({
   handleLanguageClick,
   activeLanguage,
+  languagesButtons,
 }) {
   return (
     <div className="language-header">
@@ -12,7 +13,7 @@ export default function LanguageHeader({
           handleLanguageClick("french");
         }}
       >
-        Français
+        {languagesButtons.language1}
       </a>
       /
       <a
@@ -21,7 +22,7 @@ export default function LanguageHeader({
           handleLanguageClick("english");
         }}
       >
-        English
+        {languagesButtons.language2}
       </a>
     </div>
   );

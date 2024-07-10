@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+.social-media-icons {
+  display: flex;
+  justify-content: space-around;
+  //   padding: 1em 10em;
+}
+
+.social-media-icons svg {
+  font-size: 40px;
+  cursor: pointer;
+  color: black;
+}
+
+.social-media-icons svg:hover {
+  // color: $footer-social-media-link-hover-color;
+  color: goldenrod;
+}

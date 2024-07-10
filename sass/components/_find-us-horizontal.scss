@@ -1,0 +1,58 @@
+@use "../abstracts/" as *;
+
+.find-us-horizontal {
+  background-color: $find-us-background-color;
+  .find-us-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+
+    .find-us-inner-content {
+      display: flex;
+      justify-content: center;
+      padding: 2em 0 0 0;
+      flex-direction: column;
+      gap: 4em;
+      @include mq(large) {
+        gap: 6em;
+      }
+
+      @include mq(medium) {
+        flex-direction: row;
+      }
+    }
+
+    .card-divider {
+      width: 70px;
+      height: 1px;
+      background-color: black;
+      align-self: center;
+
+      @include mq(medium) {
+        width: 1px;
+        height: 70px;
+      }
+    }
+
+    .find-us__card {
+      display: flex;
+      align-items: center;
+
+      h3 {
+        padding-bottom: 0.8em;
+      }
+
+      .card-main {
+        display: flex;
+        justify-content: center;
+        gap: 0.8em;
+        flex-direction: column;
+        color: black;
+
+        .days {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

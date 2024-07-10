@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PageHeading from "./PageHeading";
+import PageHeading from "../_components/PageHeading";
 
 export default function HeroBackgroundImage({
   mainHeading,
