@@ -21,7 +21,7 @@ export default function AboutPage() {
         heroPadding={""}
         columnLayout="even-columns"
         heroBackgroundColor={"bg-neutral-100"}
-        heroHeadingText="Au Chêne d'Or"
+        heroHeadingText="Au Vieux Chêne"
         heroSubHeadingText="Son histoire, sa cuisine & son équipe"
         heroText=""
         imageSrc="/images/find-us2.jpg"

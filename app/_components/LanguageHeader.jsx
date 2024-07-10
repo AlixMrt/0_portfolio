@@ -4,7 +4,6 @@ export default function LanguageHeader({
   handleLanguageClick,
   activeLanguage,
 }) {
-  console.log(activeLanguage);
   return (
     <div className="language-header">
       <a

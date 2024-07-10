@@ -32,7 +32,7 @@ export default function FindUs({
               <div className="card-main">
                 {openingTimeSlotArray.map((openingTimeSlot) => {
                   return (
-                    <div>
+                    <div key={openingTimeSlot.days}>
                       <p className="days">{openingTimeSlot.days}</p>
                       <p>{openingTimeSlot.hours}</p>
                     </div>
@@ -73,7 +73,7 @@ export default function FindUs({
             <div className="find-us-hours">
               {openingTimeSlotArray.map((openingTimeSlot) => {
                 return (
-                  <div>
+                  <div key={openingTimeSlot.days}>
                     <p className="days">
                       {openingTimeSlot.days} {openingTimeSlot.hours}
                     </p>

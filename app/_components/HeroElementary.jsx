@@ -7,7 +7,6 @@ export default function HeroElementary({
   heroBackgroundColor,
   heroHeadingText,
   heroSecondaryHeadingText,
-  heroTertiaryHeadingText,
   heroText,
   imageSrc,
   imageDescription,
@@ -33,7 +32,6 @@ export default function HeroElementary({
           <PageHeading
             mainHeading={heroHeadingText}
             secondaryHeading={heroSecondaryHeadingText}
-            tertiaryHeading={heroTertiaryHeadingText}
             decorationImgSrc="/svg/text-divider-4.svg"
           />
           <Image

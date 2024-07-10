@@ -21,7 +21,9 @@ export default function MenuWindowed({
     { name: dishesCategoriesArray[3] },
   ];
 
-  const [displayedDishCategory, setDisplayedDishCategory] = useState("Entrées");
+  const [displayedDishCategory, setDisplayedDishCategory] = useState(
+    dishesCategoriesArray[0]
+  );
 
   return (
     <section
@@ -35,6 +37,7 @@ export default function MenuWindowed({
           {dishCategories.map((category, index) => {
             return (
               <h3
+                key={category.name + index}
                 className={`menu-windowed-link  ${
                   displayedDishCategory === category.name ? "active-link" : ""
                 }`}
@@ -52,7 +55,7 @@ export default function MenuWindowed({
             <div className="menu-windowed-divider"></div>
             <div className="menu_menu_items">
               {dishesArray[displayedDishCategory].map((item, index) => (
-                <MenuItem2
+                <MenuItem1
                   key={item.name + index}
                   name={item.name}
                   price={item.price}

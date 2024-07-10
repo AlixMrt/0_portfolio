@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function PageHeading({
   mainHeading,
   secondaryHeading,
-  tertiaryHeading,
   decorationImgSrc,
 }) {
   return (
@@ -15,9 +14,6 @@ export default function PageHeading({
       <div className="sub-headings">
         <h2 className="heading-2 clr-neutral-1000 ff-base fs-600 text-center">
           {secondaryHeading}
-        </h2>
-        <h2 className="heading-2 clr-neutral-1000 ff-base fs-600 text-center">
-          {tertiaryHeading}
         </h2>
       </div>
 

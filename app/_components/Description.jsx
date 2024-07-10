@@ -31,9 +31,14 @@ export default function Description({
           <div>
             <h3 className={`heading-3 | ${fontColor}`}>{headingText}</h3>
             <div className="paragraphs-container">
-              {paragraphsArray.map((paragraph) => {
+              {paragraphsArray.map((paragraph, index) => {
                 return (
-                  <p className={`paragraph | ${fontColor}`}>{paragraph}</p>
+                  <p
+                    key={paragraph[0] + index + paragraph[3]}
+                    className={`paragraph | ${fontColor}`}
+                  >
+                    {paragraph}
+                  </p>
                 );
               })}
             </div>

@@ -67,18 +67,6 @@ export default function Home() {
     }
   };
 
-  // const sideNavLinks = [
-  //   // { name: "Accueil", hrefTarget: "#section1", hrefTargetName: "section1" },
-  //   { name: "Menu", hrefTarget: "#section2", hrefTargetName: "section2" },
-  //   {
-  //     name: "About us",
-  //     hrefTarget: "#section3",
-  //     hrefTargetName: "section3",
-  //   },
-  //   { name: "Gallerie", hrefTarget: "#section4", hrefTargetName: "section4" },
-  //   { name: "Contact", hrefTarget: "#section5", hrefTargetName: "section5" },
-  // ];
-
   return (
     <>
       <SideNavbar
@@ -105,13 +93,11 @@ export default function Home() {
         imageBoxShadow="box-shadow-8"
       /> */}
         <div id="section1" className="navSection">
-          {/* <HeaderElementary languagesButtons={languagesButtons} /> */}
           <HeroElementary
             columnLayout="even-columns"
             heroBackgroundColor={"bg-neutral-000"}
             heroHeadingText={data.pageHeading.pageTitle}
             heroSecondaryHeadingText={data.pageHeading.pageSubtitle}
-            // heroTertiaryHeadingText="Restaurant"
             imageSrc={data.pageHeading.imageLink}
             imageDescription={data.pageHeading.imageDescription}
             handleLanguageClick={handleLanguageStateChange}
