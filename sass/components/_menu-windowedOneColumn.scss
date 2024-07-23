@@ -1,0 +1,69 @@
+@use "../abstracts" as *;
+
+.menu-windowed-one-column {
+  .menu-title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .menu-menu {
+    //   display: grid;
+    //   gap: var(--grid-gap, 10em);
+    //   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  }
+
+  .individual-menu {
+    .heading-3 {
+      text-align: center;
+      margin-inline: auto;
+      // background-color: whitesmoke;
+      padding: 1.2em 0;
+    }
+  }
+
+  .menu-windowed-divider {
+    background-color: black;
+    width: 40px;
+    height: 1px;
+    margin: 0 auto;
+  }
+
+  .menu_menu_items {
+    display: grid;
+    gap: 1em var(--grid-gap, 6em);
+    grid-template-columns: repeat(auto-fit, minmax(min(em, 100%), 1fr));
+    padding: 1em 0 2em 0;
+  }
+
+  .menu-windowed-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em 2em;
+    // border-bottom: 1px solid black;
+    padding: 0.5em;
+    margin-bottom: 2em;
+  }
+  .menu-windowed-link {
+    cursor: pointer;
+    padding: 0.3em 1em;
+    border: 1px solid grey;
+    font-family: $font-family-accent;
+    align-self: center;
+    &:hover {
+      color: white;
+      background-color: black;
+    }
+  }
+
+  .active-link {
+    color: white;
+    background-color: black;
+  }
+
+  .menu-menu .individual-menu {
+    border: 1px solid black;
+    // padding: 2em 2em;
+    // margin: 4em;
+  }
+}

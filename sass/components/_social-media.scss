@@ -7,9 +7,12 @@
 }
 
 .social-media-icons svg {
-  font-size: 40px;
   cursor: pointer;
   color: black;
+  font-size: 30px;
+  @include mq(large) {
+    font-size: 40px;
+  }
 }
 
 .social-media-icons svg:hover {

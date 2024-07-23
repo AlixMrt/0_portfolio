@@ -23,7 +23,7 @@ a:is(:hover, :focus) {
 
 body {
   display: grid;
-
+  width: 100%;
   grid-template-areas: "main" "footer" "nav";
 
   // grid-template-rows: $site-side-navbar-width 85vw;

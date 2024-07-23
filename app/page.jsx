@@ -13,7 +13,8 @@ import bgImg from "../public/images/background5.jpg";
 import dataEn from "../data/data-en";
 import dataFr from "../data/data-fr";
 
-import MenuWindowed from "./_components/MenuWindowed";
+import MenuWindowedOneColumn from "./_components/MenuWindowedOneColumn";
+import MenuWindowedTwoColumns from "./_components/MenuWindowedTwoColumns";
 import Hero from "./_components_others/Hero";
 import HeroElementary from "./_components/HeroElementary";
 import FindUsHorizontal from "./_components/FindUsHorizontal";
@@ -93,7 +94,13 @@ export default function Home() {
             activeLanguage={currentLanguage}
           />
         </div>
-        <MenuWindowed
+        {/* <MenuWindowedOneColumn
+          id="section2"
+          headingText={data.sideNavLinks[0].name}
+          dishesArray={data.dishesArray}
+          dishesCategoriesArray={data.dishesCategoriesArray}
+        /> */}
+        <MenuWindowedTwoColumns
           id="section2"
           headingText={data.sideNavLinks[0].name}
           dishesArray={data.dishesArray}
@@ -134,13 +141,13 @@ export default function Home() {
           findUsData={data.findUs}
           openingTimeSlotArray={data.openingTimeSlotsArray}
         />
-        <FindUsHorizontal
+        {/* <FindUsHorizontal
           id="section5"
           data={data}
           headingText={data.sideNavLinks[3].name}
           findUsData={data.findUs}
           openingTimeSlotArray={data.openingTimeSlotsArray}
-        />
+        /> */}
       </main>
       <Footer />
     </>

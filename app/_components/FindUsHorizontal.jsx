@@ -48,6 +48,7 @@ export default function FindUsHorizontal({
               </div>
             </div>
           </div>
+
           <SocialMedia />
         </div>
       </div>

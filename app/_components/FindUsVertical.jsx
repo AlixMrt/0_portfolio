@@ -44,6 +44,7 @@ export default function FindUsVertical({
               <p> {phoneNumber}</p>
             </div>
           </div>
+          <div className="find-us-divider"></div>
           <SocialMedia />
         </div>
       </div>
