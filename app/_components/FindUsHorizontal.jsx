@@ -23,7 +23,7 @@ export default function FindUsHorizontal({
           <div className="find-us-inner-content">
             <div className={`find-us__card | center-children `}>
               <h3 className="heading-3 | card-header__text">Horaires</h3>
-              <div className="card-main">
+              <div className="card-main card-hours">
                 {openingTimeSlotArray.map((openingTimeSlot) => {
                   return (
                     <div key={openingTimeSlot.days}>
@@ -37,14 +37,14 @@ export default function FindUsHorizontal({
             <div className="card-divider"></div>
             <div className={`find-us__card | center-children `}>
               <h3 className="heading-3 | card-header__text">Adresse</h3>
-              <div className="card-main">
-                <div id="border-bottom"></div>
+              <div className="card-main card-address">
                 <div>
                   <p>{street}</p>
                   <p>{city}</p>
-                  <p>{phoneNumber}</p>
-                  <p>{email}</p>
                 </div>
+
+                <p>{phoneNumber}</p>
+                <p>{email}</p>
               </div>
             </div>
           </div>

@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}

@@ -1,0 +1,117 @@
+@use "../abstracts" as *;
+
+.organized-menu {
+  .menu-windowed-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em 2em;
+    padding: 0.5em;
+    margin-bottom: 2em;
+
+    .menu-windowed-link {
+      cursor: pointer;
+      padding: 0.3em 1em;
+      border: 1px solid grey;
+      font-family: $font-family-accent;
+      align-self: center;
+      //   font-family: $font-family-base;
+      font-size: 26px;
+      box-shadow: $box-shadow-4;
+      color: $color-neutral-1000;
+
+      &:hover,
+      &:active {
+        background-color: $color-neutral-1000;
+        box-shadow: $box-shadow-4;
+        color: $color-neutral-100;
+      }
+    }
+  }
+
+  .menu-list-divider {
+    width: 5%;
+    height: 1px;
+    margin: 2em auto 2em auto;
+    background-color: $color-neutral-400;
+  }
+
+  .others-menu-windowed-links {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5em;
+
+    .menu-windowed-link {
+      cursor: pointer;
+      padding: 0.3em 1em;
+      border: 1px solid grey;
+      font-family: $font-family-accent;
+      align-self: center;
+      font-size: 26px;
+      color: $color-neutral-1000;
+
+      &:hover,
+      &:active {
+        background-color: $color-neutral-1000;
+        color: $color-neutral-100;
+      }
+    }
+  }
+
+  #active-link {
+    background-color: $color-neutral-1000;
+    color: $color-neutral-100;
+  }
+
+  .menu-title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .menu-menu {
+    border: 3px solid $color-neutral-1000;
+    box-shadow: $box-shadow-8;
+    padding-bottom: 2em;
+  }
+
+  .individual-menu {
+    .heading-3 {
+      text-align: center;
+      margin-inline: auto;
+      padding: 2em 0 1em 0;
+      line-height: 1.3em;
+    }
+
+    .menu-price {
+      font-size: 80%;
+      color: $color-neutral-700;
+      font-weight: 200;
+    }
+    .menu-divider {
+      background-color: $color-accent-500;
+      width: 40%;
+      height: 2px;
+      margin: 0 auto 2em auto;
+    }
+
+    .sub-individual-menu {
+      .heading-4 {
+        padding: 2em 0 1em 0;
+        text-align: center;
+        font-weight: 300;
+        font-family: $font-family-base;
+      }
+      .sub-menu-divider {
+        background-color: $color-neutral-400;
+        width: 5%;
+        height: 1px;
+        margin: 0em auto 0em auto;
+      }
+      .menu_menu_items {
+        display: grid;
+        gap: 1em var(--grid-gap, 6em);
+        padding: 1em 0 1em 0;
+      }
+    }
+  }
+}

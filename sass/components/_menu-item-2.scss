@@ -22,11 +22,13 @@
       .item-name {
         flex: 1;
         margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
         color: $menu-item-name-color;
         font-weight: $menu-item-font-weight;
         font-family: $menu-item-font-family;
         font-size: $menu-item-font-size;
         text-align: center;
+        line-height: 100%;
 
         span {
           color: rgb(33, 33, 33);
@@ -36,7 +38,7 @@
     }
 
     svg {
-      color: $color-accent-600;
+      color: $color-accent-500;
     }
     .item-dash {
       width: 60px;
@@ -67,5 +69,6 @@
     margin-top: 0.2rem;
     color: $menu-item-description-color;
     text-align: center;
+    font-weight: 400;
   }
 }

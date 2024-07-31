@@ -73,7 +73,7 @@ $grid-gap: $size-10;
 $flex-group-gap: $size-4;
 
 $hero-padding-block: clamp(15rem, 15vh, 20rem);
-$section-padding-block: clamp(5rem, 8vh, 6rem);
+$section-padding-block: clamp(3rem, 10%, 6rem);
 
 $container-min-margin-inline: $size-4;
 
@@ -118,13 +118,13 @@ $site-side-navbar-width: 15vw;
 $site-side-navbar-height: 12vh;
 
 // find us
-$find-us-background-color: $color-neutral-200;
+$find-us-background-color: $color-neutral-000;
 
 // site footer
 $site-footer-padding: $size-13 0 $size-8 0;
 $site-footer-margin: 0;
 $footer-border-top: none;
-$footer-background-color: $color-neutral-900;
+$footer-background-color: $color-neutral-1000;
 $footer-text-color: $color-neutral-100;
 $footer-text-copyright-color: $color-neutral-300;
 $footer-link-color: $color-neutral-900;

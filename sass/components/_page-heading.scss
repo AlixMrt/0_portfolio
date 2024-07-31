@@ -2,22 +2,27 @@
 
 .page-heading {
   padding: 2em 1em 0 1em;
-  // margin-bottom: 5em;
   display: grid;
-  gap: 0.5em;
+  gap: 0.8em;
 
   h1 {
-    color: goldenrod;
+    color: $color-accent-500;
+  }
+
+  .heading-divider {
+    height: 2px;
+    width: 25%;
+    background-color: $color-accent-500;
   }
 
   .sub-headings {
     display: grid;
-    padding: 1em;
+    padding: 1.5em 1em 1.5em 1em;
     gap: 0.6em;
 
     h2 {
       font-weight: 500;
-      color: #6d5312;
+      color: $color-neutral-600;
     }
   }
 }

@@ -2,6 +2,7 @@ import Image from "next/image";
 
 export default function SectionHeader({
   headingText,
+  headingSubText,
   headingColor,
   displayDecoration,
   decorationColor,
@@ -13,12 +14,11 @@ export default function SectionHeader({
       data-decoration={displayDecoration}
     >
       <h2 className={`heading-2 ${headingColor} `}>{headingText}</h2>
-
+      {headingSubText && <h3>{headingSubText}</h3>}
       <Image
-        src={"svg/text-divider-4.svg"}
+        src={"text-divider/text-divider.svg"}
         height={85}
         width={150}
-        className="rotate-svg"
         alt="ornemental decoration for a section"
       />
     </div>

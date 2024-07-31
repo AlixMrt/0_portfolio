@@ -2,18 +2,8 @@ const Navbar = ({ sideNavLinks, activeSection }) => {
   return (
     <nav className="site-side-navbar">
       <div className="site-side-navbar-container">
-        {/* <a className="logo-container">
-        <img src="/svg/white.svg" alt="" />
-        <h4 className="heading-4">Au Vieux Chêne</h4>
-      </a> */}
         <a href="#section1" className="logo-container">
-          <img
-            className={` mx-auto ${
-              activeSection === "section1" ? "activeImg" : ""
-            }`}
-            src="/svg/white.svg"
-            alt=""
-          />
+          <img className={` mx-auto`} src="/logo/LogoGolden.svg" alt="" />
           <h4
             className={` side-navbar-link heading-4 ${
               activeSection === "section1" ? "activeSideNavLink" : ""

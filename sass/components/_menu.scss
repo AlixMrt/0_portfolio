@@ -1,35 +1,41 @@
 @use "../abstracts" as *;
 
 .menu {
-  //   background: black;
+  .menu-menu {
+    border: 3px solid $color-neutral-1000;
+    box-shadow: $box-shadow-8;
+    .heading-3 {
+      text-align: center;
+      margin-inline: auto;
+    }
+  }
 
-  .heading-3 {
+  .menu-title {
+    margin-bottom: 2rem;
     text-align: center;
-    margin-inline: auto;
   }
-}
 
-.menu-title {
-  margin-bottom: 2rem;
-  text-align: center;
-}
+  .individual-menu {
+    padding-bottom: 2em;
 
-.menu-menu {
-  //   display: grid;
-  //   gap: var(--grid-gap, 10em);
-  //   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-}
-
-.individual-menu {
-  // padding: 2em 0;
-
-  .heading-3 {
-    // padding-bottom: 1em;
+    .heading-3 {
+      padding-top: 2em;
+      padding-bottom: 0.5em;
+      font-family: $font-family-base;
+      font-weight: 300;
+    }
+    .menu-divider {
+      background-color: $color-accent-500;
+      width: 5%;
+      height: 1px;
+      margin: 0 auto;
+    }
   }
-}
 
-.menu_menu_items {
-  display: grid;
-  gap: 1em var(--grid-gap, 6em);
-  grid-template-columns: repeat(auto-fit, minmax(min(em, 100%), 1fr));
+  .menu_menu_items {
+    padding-top: 2em;
+    display: grid;
+    gap: 1em var(--grid-gap, 6em);
+    grid-template-columns: repeat(auto-fit, minmax(min(em, 100%), 1fr));
+  }
 }

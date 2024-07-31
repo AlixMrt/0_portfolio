@@ -13,7 +13,7 @@
   padding: $button-padding;
   border: $button-border;
   border-radius: $button-border-radius;
-  transition: 275ms ease;
+  transition: 75ms linear;
 
   &[data-type="primary"] {
     color: $button-primary-color;

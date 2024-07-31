@@ -14,6 +14,8 @@ export default function Footer() {
             <SectionHeader
               headingText={"Au Vieux Chêne"}
               headingColor="clr-neutral-000"
+              headingSubText="Restaurant Gastronomique - Fontainebleau"
+              marginBlockEnd="1"
             />
           </Link>
         </div>

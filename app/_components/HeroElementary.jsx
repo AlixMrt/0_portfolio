@@ -1,6 +1,6 @@
 import Image from "next/image";
 import PageHeading from "./PageHeading";
-import flowerImage from "/public/svg/fleur.svg";
+import frameOrnament from "/public/svg/frameOrnament.svg";
 import LanguageHeader from "./LanguageHeader";
 export default function HeroElementary({
   heroPadding,
@@ -37,29 +37,29 @@ export default function HeroElementary({
             decorationImgSrc="/svg/text-divider-4.svg"
           />
           <Image
-            className="flower flower-1"
-            src={flowerImage}
+            className="frameOrnament frameOrnament-1"
+            src={frameOrnament}
             width={50}
             height={50}
             alt="hello"
           />
           <Image
-            className="flower flower-2"
-            src={flowerImage}
+            className="frameOrnament frameOrnament-2"
+            src={frameOrnament}
             width={50}
             height={50}
             alt="hello"
           />
           <Image
-            className="flower flower-3"
-            src={flowerImage}
+            className="frameOrnament frameOrnament-3"
+            src={frameOrnament}
             width={50}
             height={50}
             alt="hello"
           />
           <Image
-            className="flower flower-4"
-            src={flowerImage}
+            className="frameOrnament frameOrnament-4"
+            src={frameOrnament}
             width={50}
             height={50}
             alt="hello"

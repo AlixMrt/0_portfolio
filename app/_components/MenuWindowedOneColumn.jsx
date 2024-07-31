@@ -10,6 +10,8 @@ export default function MenuWindowedOneColumn({
   headingText,
   dishesArray,
   dishesCategoriesArray,
+  vegetarianWording,
+  veganWording,
 }) {
   const { Entrées, Plats, Desserts, Vins } = dishesArray;
 
@@ -54,12 +56,15 @@ export default function MenuWindowedOneColumn({
             <div className="menu-windowed-divider"></div>
             <div className="menu_menu_items">
               {dishesArray[displayedDishCategory].map((item, index) => (
-                <MenuItem1
+                <MenuItem2
                   key={item.name + index}
                   name={item.name}
                   price={item.price}
                   description={item.description}
                   isVegetarian={item.isVegetarian}
+                  isVegan={item.isVegan}
+                  vegetarianWording={vegetarianWording}
+                  veganWording={veganWording}
                 />
               ))}
             </div>

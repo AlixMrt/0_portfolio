@@ -19,6 +19,17 @@ $-clr-orange-600: hsl(24 75% 40%);
 $-clr-orange-700: hsl(24 75% 30%);
 $-clr-orange-800: hsl(24 75% 17.5%);
 $-clr-orange-900: hsl(24 75% 7.5%);
+
+$-clr-gold-100: hsl(43, 74%, 90%);
+$-clr-gold-200: hsl(43, 74%, 80%);
+$-clr-gold-300: hsl(43, 74%, 70%);
+$-clr-gold-400: hsl(43, 74%, 60%);
+$-clr-gold-500: hsl(43, 74%, 50%);
+$-clr-gold-600: hsl(43, 74%, 40%);
+$-clr-gold-700: hsl(43, 74%, 30%);
+$-clr-gold-800: hsl(43, 74%, 20%);
+$-clr-gold-900: hsl(43, 74%, 10%);
+
 $-clr-yellow-100: hsl(48 75% 95%);
 $-clr-yellow-200: hsl(48 75% 82.5%);
 $-clr-yellow-300: hsl(48 75% 70%);
@@ -28,6 +39,7 @@ $-clr-yellow-600: hsl(48 75% 40%);
 $-clr-yellow-700: hsl(48 75% 30%);
 $-clr-yellow-800: hsl(48 75% 17.5%);
 $-clr-yellow-900: hsl(48 75% 7.5%);
+
 $-clr-yellowgreen-100: hsl(72 75% 95%);
 $-clr-yellowgreen-200: hsl(72 75% 82.5%);
 $-clr-yellowgreen-300: hsl(72 75% 70%);
@@ -152,15 +164,15 @@ $light: (
     "1000": $-clr-black,
   ),
   "accent": (
-    "100": $-clr-lime-100,
-    "200": $-clr-lime-200,
-    "300": $-clr-lime-300,
-    "400": $-clr-lime-400,
-    "500": $-clr-lime-500,
-    "600": $-clr-lime-600,
-    "700": $-clr-lime-700,
-    "800": $-clr-lime-800,
-    "900": $-clr-lime-900,
+    "100": $-clr-gold-100,
+    "200": $-clr-gold-200,
+    "300": $-clr-gold-300,
+    "400": $-clr-gold-400,
+    "500": $-clr-gold-500,
+    "600": $-clr-gold-600,
+    "700": $-clr-gold-700,
+    "800": $-clr-gold-800,
+    "900": $-clr-gold-900,
   ),
   "primary": (
     "100": $-clr-skyblue-100,
@@ -190,15 +202,15 @@ $dark: (
     "000": $-clr-black,
   ),
   "accent": (
-    "900": $-clr-deeppink-900,
-    "800": $-clr-deeppink-800,
-    "700": $-clr-deeppink-700,
-    "600": $-clr-deeppink-600,
-    "500": $-clr-deeppink-500,
-    "400": $-clr-deeppink-400,
-    "300": $-clr-deeppink-300,
-    "200": $-clr-deeppink-200,
-    "100": $-clr-deeppink-100,
+    "900": $-clr-gold-900,
+    "800": $-clr-gold-800,
+    "700": $-clr-gold-700,
+    "600": $-clr-gold-600,
+    "500": $-clr-gold-500,
+    "400": $-clr-gold-400,
+    "300": $-clr-gold-300,
+    "200": $-clr-gold-200,
+    "100": $-clr-gold-100,
   ),
   "primary": (
     "900": $-clr-skyblue-900,

@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+
+.header-absolute {
+  display: flex;
+  align-items: center;
+
+  justify-content: $site-header-absolute-justification-small-screens;
+  position: absolute;
+  inset: 0 0 auto;
+  padding: $site-header-absolute-padding;
+  margin: $site-header-absolute-margin;
+  @include mq(medium) {
+    justify-content: $site-header-absolute-justification-large-screens;
+  }
+
+  .active {
+    text-decoration: underline;
+  }
+
+  .logo {
+    border-radius: 50%;
+    @include mq(medium) {
+      height: 150px;
+      width: 150px;
+      border: $color-neutral-1000 2px solid;
+    }
+  }
+
+  & .nav {
+    // display: flex;
+    flex-direction: column;
+    gap: $size-1;
+    text-align: center;
+
+    & a .heading-3 {
+      color: $site-header-absolute-color;
+      font-size: $site-header-absolute-link-font-size;
+      font-family: $site-header-absolute-link-font-family;
+      padding: 0.25em 0.5em;
+
+      border-radius: $border-radius-1;
+      font-style: italic;
+
+      &:is(:hover, :focus) {
+        // background-color: rgba($color: white, $alpha: 0.45);
+        // color: $site-header-absolute-link-color-hover;
+        // background-color: rgba($color: white, $alpha: 0.65);
+        text-decoration: underline;
+      }
+    }
+    @include mq(medium) {
+      padding: 0.5em 1em;
+      flex-direction: row;
+      gap: $size-10;
+      padding-top: 0;
+    }
+  }
+}

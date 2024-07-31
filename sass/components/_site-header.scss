@@ -10,29 +10,21 @@
     text-decoration: underline;
 
     @include mq(medium) {
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid $color-neutral-1000;
       text-decoration: none;
     }
   }
-
-  // @include mq(medium) {
-  //   .active {
-  //     border-bottom: 1px solid black;
-  //     text-decoration: none;
-  //   }
-  // }
 
   .logo {
     border-radius: 50%;
     @include mq(medium) {
       height: $site-header-logo-size;
       width: $site-header-logo-size;
-      border: black 2px solid;
+      border: $color-neutral-1000 2px solid;
     }
   }
 
   & .nav {
-    // display: flex;
     flex-direction: column;
     gap: $size-1;
     text-align: center;
@@ -42,12 +34,11 @@
       font-size: $site-header-link-font-size;
       font-family: $site-header-link-font-family;
       padding: 0.25em 0.5em;
-      // font-style: italic;
 
       @include mq(medium) {
         text-decoration: none;
         &:is(:hover, :focus) {
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid $color-neutral-1000;
           border-right: none;
         }
       }

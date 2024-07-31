@@ -4,18 +4,18 @@ export default function menuItem2({
   description,
   isVegetarian = false,
   isVegan = false,
+  vegetarianWording,
+  veganWording,
 }) {
   return (
     <div className="menu-item-2">
       <div className="item-head">
         <div className="item-name-container">
-          <div className="item-name">
-            <p>
-              {name} <span>{isVegetarian ? "(Végétarien) " : null}</span>
-              <span>{isVegan ? "(Végan) " : null}</span>
-              <span>{`- ${price} €`}</span>
-            </p>
-          </div>
+          <p className="item-name">
+            {name} <span>{isVegetarian ? vegetarianWording : null}</span>
+            <span>{isVegan ? veganWording : null}</span>
+            <span>{price && `- ${price}€`}</span>
+          </p>
         </div>
         <div className="item-description">
           <p>{description}</p>

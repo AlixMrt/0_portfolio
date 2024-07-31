@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #daa520;
+        fill: $color-accent-500;
         stroke-width: 0px;
       }
     </style>

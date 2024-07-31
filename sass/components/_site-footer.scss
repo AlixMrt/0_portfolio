@@ -8,15 +8,6 @@
   padding: $site-footer-padding;
   margin: $site-footer-margin;
 
-  .logo {
-    border-radius: 50%;
-    border: black 2px solid;
-    @include mq(medium) {
-      height: 150px;
-      width: 150px;
-    }
-  }
-
   .footer-main-content {
     display: flex;
     justify-content: space-between;
@@ -29,8 +20,7 @@
 
     h2 {
       text-align: center;
-      // color: $footer-text-color;
-      color: goldenrod;
+      color: $color-accent-500;
     }
   }
 
@@ -39,10 +29,5 @@
       color: $footer-text-copyright-color;
       text-align: center;
     }
-  }
-
-  .rotate-svg {
-    filter: brightness(0) saturate(100%) invert(87%) sepia(18%) saturate(5202%)
-      hue-rotate(346deg) brightness(91%) contrast(87%);
   }
 }

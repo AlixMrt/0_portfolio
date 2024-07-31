@@ -15,12 +15,14 @@
       justify-content: center;
 
       .item-name {
-        flex: 1;
+        flex: 2;
         margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
         color: $menu-item-name-color;
         font-weight: $menu-item-font-weight;
         font-family: $menu-item-font-family;
         font-size: $menu-item-font-size;
+        line-height: 100%;
 
         span {
           color: rgb(44, 44, 44);
@@ -30,20 +32,20 @@
     }
 
     svg {
-      color: $color-accent-600;
+      color: $color-accent-500;
     }
     .item-dash {
-      width: 60px;
+      width: 20px;
       height: 1px;
       background: $menu-item-dash-color;
       margin: 0 1rem;
 
       @include mq(medium) {
-        width: 90px;
+        width: 40px;
       }
 
       @include mq(large) {
-        width: 120px;
+        width: 80px;
       }
     }
 
@@ -52,7 +54,6 @@
         color: $menu-item-name-color;
         font-weight: $menu-item-font-weight;
         font-family: $menu-item-font-family;
-        // font-size: $menu-item-font-size;
         font-size: 22px;
       }
     }

@@ -1,28 +1,31 @@
 "use client";
 
-// Components
-import Description from "./_components/Description";
-import HeroBackgroundImage from "./_components_others/HeroBackgroundImage";
-import Menu from "./_components/Menu";
-import ImagesGallery from "./_components/ImagesGallery";
-import HeaderElementary from "./_components/HeaderElementary";
-import SideNavbar from "./_components/SideNavbar";
-import bgImg from "../public/images/background5.jpg";
+// // HOOKS // //
+import { useEffect, useState } from "react";
 
-// Data
+// // DATA // //
 import dataEn from "../data/data-en";
 import dataFr from "../data/data-fr";
 
+// // COMPONENTS // //
+// Navbar
+import SideNavbar from "./_components/SideNavbar";
+// Hero
+import HeroElementary from "./_components/HeroElementary";
+// Restaurant Menu
+import Menu from "./_components/Menu";
 import MenuWindowedOneColumn from "./_components/MenuWindowedOneColumn";
 import MenuWindowedTwoColumns from "./_components/MenuWindowedTwoColumns";
-import Hero from "./_components_others/Hero";
-import HeroElementary from "./_components/HeroElementary";
-import FindUsHorizontal from "./_components/FindUsHorizontal";
-import FindUsVertical from "./_components/FindUsVertical";
-import SectionHeader from "./_components/SectionHeader";
-import { useEffect, useState } from "react";
+// About us
 import AboutUs from "./_components/AboutUs";
+// Gallery
+import ImagesSection from "./_components/ImagesSection";
+// Find us
+import FindUsHorizontal from "./_components/FindUsHorizontal";
+// Footer
 import Footer from "./_components/Footer";
+import ImageSlider from "./_components/ImageSlider_1";
+import OrganizedMenu from "./_components/OrganizedMenu";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("section1");
@@ -62,25 +65,6 @@ export default function Home() {
         activeSection={activeSection}
       />
       <main>
-        {/* <HeroBackgroundImage
-          mainHeading="Au Vieux Chêne"
-          secondaryHeading="Restaurant gastronomique à Fontainebleau"
-          decorationImgSrc="svg/text-divider-4.svg"
-          bgImage={bgImg}
-        />
-        <Hero
-          heroPadding={""}
-          columnLayout="even-columns"
-          heroBackgroundColor={"bg-neutral-000"}
-          heroHeadingText="Au Vieux Chêne"
-          heroSubHeadingText="Restaurant gastronomique à Fontainebleau"
-          heroText=""
-          imageSrc="/images/find-us2.jpg"
-          imageDescription="two children holding hands"
-          imageBorderRadius=""
-          imageBoxShadow="box-shadow-8"
-        /> */}
-
         <div id="section1" className="navSection">
           <HeroElementary
             columnLayout="even-columns"
@@ -94,17 +78,38 @@ export default function Home() {
             activeLanguage={currentLanguage}
           />
         </div>
-        {/* <MenuWindowedOneColumn
+        <Menu
+          id="section2"
+          dishesArray={data.dishesArray}
+          dishesCategoriesArray={data.dishesCategoriesArray}
+          // vegetarianWording={data.vegetarianWording}
+          // veganWording={data.veganWording}
+        />
+        <MenuWindowedOneColumn
           id="section2"
           headingText={data.sideNavLinks[0].name}
           dishesArray={data.dishesArray}
           dishesCategoriesArray={data.dishesCategoriesArray}
-        /> */}
+          // vegetarianWording={data.vegetarianWording}
+          // veganWording={data.veganWording}
+        />
         <MenuWindowedTwoColumns
           id="section2"
           headingText={data.sideNavLinks[0].name}
           dishesArray={data.dishesArray}
           dishesCategoriesArray={data.dishesCategoriesArray}
+          // vegetarianWording={data.vegetarianWording}
+          // veganWording={data.veganWording}
+        />
+
+        <OrganizedMenu
+          id="section2"
+          headingText={data.sideNavLinks[0].name}
+          menusArray={data.menusArray}
+          menusCategoriesArray={data.menusCategoriesArray}
+          menusOtherCategoriesArray={data.menusOtherCategoriesArray}
+          // vegetarianWording={data.vegetarianWording}
+          // veganWording={data.veganWording}
         />
 
         <AboutUs
@@ -112,42 +117,24 @@ export default function Home() {
           headingText={data.sideNavLinks[1].name}
           aboutUsData={data.descriptionArray}
         />
-
-        <ImagesGallery
+        <ImageSlider
           id="section4"
           headingText={data.sideNavLinks[2].name}
           imagesArray={data.imagesArray}
         />
-        {/* <Menu dishesArray={data.dishesArray} /> */}
-        {/* 
+        {/* <ImagesSection
+          id="section4"
+          headingText={data.sideNavLinks[2].name}
+          imagesArray={data.imagesArray}
+        /> */}
+
         <FindUsHorizontal
           id="section5"
           data={data}
           headingText={data.sideNavLinks[3].name}
           findUsData={data.findUs}
           openingTimeSlotArray={data.openingTimeSlotsArray}
-        /> */}
-        {/* <FindUsVertical
-          id="section5"
-          data={data}
-          headingText={data.sideNavLinks[3].name}
-          findUsData={data.findUs}
-          openingTimeSlotArray={data.openingTimeSlotsArray}
-        /> */}
-        <FindUsVertical
-          id="section5"
-          data={data}
-          headingText={data.sideNavLinks[3].name}
-          findUsData={data.findUs}
-          openingTimeSlotArray={data.openingTimeSlotsArray}
         />
-        {/* <FindUsHorizontal
-          id="section5"
-          data={data}
-          headingText={data.sideNavLinks[3].name}
-          findUsData={data.findUs}
-          openingTimeSlotArray={data.openingTimeSlotsArray}
-        /> */}
       </main>
       <Footer />
     </>

@@ -6,36 +6,28 @@
     text-align: center;
   }
 
-  .menu-menu {
-    //   display: grid;
-    //   gap: var(--grid-gap, 10em);
-    //   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-  }
-
   .individual-menu {
     .heading-3 {
       text-align: center;
       margin-inline: auto;
-      // background-color: whitesmoke;
-      padding: 1.2em 0;
+      padding: 1.2em 0 1em 0;
+      font-family: $font-family-base;
+      font-weight: 300;
     }
   }
 
   .menu-windowed-divider {
-    background-color: black;
-    width: 40px;
+    background-color: $color-accent-500;
+    width: 15%;
     height: 1px;
     margin: 0 auto;
   }
 
   .menu_menu_items {
     display: grid;
-    gap: 1em var(--grid-gap, 6em);
-    // grid-template-columns: repeat(auto-fit, minmax(min(em, 100%), 1fr));
-    padding: 1em 0 2em 0;
+    // gap: 1em var(--grid-gap, 6em);
+    padding: 2em 0 2em 0;
     grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
-
-    // background: cyan;
   }
 
   .menu-windowed-links {
@@ -43,30 +35,29 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1em 2em;
-    // border-bottom: 1px solid black;
     padding: 0.5em;
     margin-bottom: 2em;
   }
   .menu-windowed-link {
     cursor: pointer;
     padding: 0.3em 1em;
-    border: 1px solid grey;
+    border: 1px solid $color-neutral-800;
     font-family: $font-family-accent;
     align-self: center;
     &:hover {
-      color: white;
-      background-color: black;
+      color: $color-neutral-000;
+      background-color: $color-neutral-1000;
     }
   }
 
   .active-link {
-    color: white;
-    background-color: black;
+    color: $color-neutral-000;
+    background-color: $color-neutral-1000;
   }
 
-  .menu-menu .individual-menu {
-    border: 1px solid black;
-    // padding: 2em 2em;
-    // margin: 4em;
+  .menu-menu {
+    border: 3px solid $color-neutral-1000;
+    box-shadow: $box-shadow-8;
+  
   }
 }

@@ -5,7 +5,7 @@ export default function AboutUs({ id, headingText, aboutUsData }) {
   return (
     <section
       id={id}
-      className="section navSection | clr-neutral-900 bg-neutral-000 "
+      className="section navSection | about-us clr-neutral-900 bg-neutral-000 "
     >
       <SectionHeader
         headingText={headingText}

@@ -3,19 +3,17 @@
 .social-media-icons {
   display: flex;
   justify-content: space-around;
-  //   padding: 1em 10em;
 }
 
 .social-media-icons svg {
   cursor: pointer;
-  color: black;
-  font-size: 30px;
+  color: $color-neutral-1000;
+  font-size: 35px;
   @include mq(large) {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 
 .social-media-icons svg:hover {
-  // color: $footer-social-media-link-hover-color;
-  color: goldenrod;
+  color: $color-accent-500;
 }

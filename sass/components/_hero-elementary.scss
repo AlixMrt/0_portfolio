@@ -2,7 +2,6 @@
 
 .hero-elementary {
   height: 100vh;
-
   display: flex;
   align-items: center;
   align-content: center;
@@ -12,16 +11,14 @@
   position: relative;
 
   .hero-elementary-container {
-    border: solid 1px goldenrod;
+    border: solid 1px $color-accent-500;
   }
   .content-container {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid $color-neutral-1000;
     padding: 1em 2em;
-
     position: relative;
-    // border-radius: 20px;
 
     .hero-image {
       width: 150px;
@@ -32,31 +29,29 @@
       }
     }
 
-    .flower {
-      // filter: invert(75%) sepia(78%) saturate(4742%) hue-rotate(16deg)
-      //   brightness(92%) contrast(82%);
+    .frameOrnament {
       position: absolute;
       width: 35px;
       @include mq(medium) {
         width: 50px;
       }
     }
-    .flower-1 {
+    .frameOrnament-1 {
       top: 10px;
       left: 10px;
       transform: rotate(-45deg);
     }
-    .flower-2 {
+    .frameOrnament-2 {
       top: 10px;
       right: 10px;
       transform: rotate(45deg);
     }
-    .flower-3 {
+    .frameOrnament-3 {
       bottom: 10px;
       right: 10px;
       transform: rotate(135deg);
     }
-    .flower-4 {
+    .frameOrnament-4 {
       bottom: 10px;
       left: 10px;
       transform: rotate(-135deg);

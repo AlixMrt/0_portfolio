@@ -10,7 +10,7 @@
 
   .page-heading {
     background-color: rgba($color: white, $alpha: 0.85);
-    border: black 2px solid;
+    border: $color-neutral-1000 2px solid;
 
     @include mq(medium) {
       background-color: transparent;

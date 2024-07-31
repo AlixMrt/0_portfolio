@@ -74,7 +74,7 @@ const data = {
         price: "10",
         description:
           "Rouge vif d’Étampes, oignons caramélisés, bouquet d'épices et crème fraîche",
-        isVegetarian: "true",
+        // isVegetarian: "true",
       },
       {
         name: "Salade Parisienne",
