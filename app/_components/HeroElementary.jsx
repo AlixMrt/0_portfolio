@@ -1,6 +1,5 @@
 import Image from "next/image";
 import PageHeading from "./PageHeading";
-import frameOrnament from "/public/svg/fleur.svg";
 import LanguageHeader from "./LanguageHeader";
 export default function HeroElementary({
   heroPadding,
@@ -10,17 +9,19 @@ export default function HeroElementary({
   heroText,
   imageSrc,
   imageDescription,
+  ornamentImgSrc,
+  ornamentImgDescription,
   handleLanguageClick,
   activeLanguage,
   languagesButtons,
 }) {
   return (
     <section className={`hero-elementary | ${heroBackgroundColor} `}>
-      <LanguageHeader
+      {/* <LanguageHeader
         handleLanguageClick={handleLanguageClick}
         activeLanguage={activeLanguage}
         languagesButtons={languagesButtons}
-      />
+      /> */}
 
       <div className="container | hero-elementary-container" data-type="narrow">
         <div className="content-container box-shadow-8">
@@ -30,6 +31,7 @@ export default function HeroElementary({
             width={200}
             height={200}
             alt={imageDescription}
+            priority
           />
           <PageHeading
             mainHeading={heroHeadingText}
@@ -38,31 +40,31 @@ export default function HeroElementary({
           />
           <Image
             className="frameOrnament frameOrnament-1"
-            src={frameOrnament}
+            src={ornamentImgSrc}
             width={50}
             height={50}
-            alt="hello"
+            alt={ornamentImgDescription}
           />
           <Image
             className="frameOrnament frameOrnament-2"
-            src={frameOrnament}
+            src={ornamentImgSrc}
             width={50}
             height={50}
-            alt="hello"
+            alt={ornamentImgDescription}
           />
           <Image
             className="frameOrnament frameOrnament-3"
-            src={frameOrnament}
+            src={ornamentImgSrc}
             width={50}
             height={50}
-            alt="hello"
+            alt={ornamentImgDescription}
           />
           <Image
             className="frameOrnament frameOrnament-4"
-            src={frameOrnament}
+            src={ornamentImgSrc}
             width={50}
             height={50}
-            alt="hello"
+            alt={ornamentImgDescription}
           />
         </div>
       </div>

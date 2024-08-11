@@ -2,8 +2,10 @@ const data = {
   pageHeading: {
     pageTitle: "Au Vieux Chêne",
     pageSubtitle: "Restaurant Gastronomique Fontainebleau",
+    imageLink: "/svg/tree-black.svg",
     imageDescription: "logo d'un vieux chêne, arbre symbole du restaurant",
-    imageLink: "/svg/tree.svg",
+    ornamentLink: "/svg/ornament-black.svg",
+    ornamentDescription: "small ornamental element",
   },
 
   languagesButtons: {
@@ -11,21 +13,25 @@ const data = {
     language2: "english",
   },
 
-  sideNavLinks: [
-    // { name: "Accueil", hrefTarget: "#section1", hrefTargetName: "section1" },
-    { name: "Menu", hrefTarget: "#section2", hrefTargetName: "section2" },
-    {
-      name: "À propos",
-      hrefTarget: "#section3",
-      hrefTargetName: "section3",
-    },
-    { name: "Galerie", hrefTarget: "#section4", hrefTargetName: "section4" },
-    {
-      name: "Nous trouver",
-      hrefTarget: "#section5",
-      hrefTargetName: "section5",
-    },
-  ],
+  navBar: {
+    imageLink: "/svg/tree-gold.svg",
+    imageDescription: "logo d'un vieux chêne, arbre symbole du restaurant",
+    links: [
+      // { name: "Accueil", hrefTarget: "#section1", hrefTargetName: "section1" },
+      { name: "Menu", hrefTarget: "#section2", hrefTargetName: "section2" },
+      {
+        name: "À propos",
+        hrefTarget: "#section3",
+        hrefTargetName: "section3",
+      },
+      { name: "Galerie", hrefTarget: "#section4", hrefTargetName: "section4" },
+      {
+        name: "Nous trouver",
+        hrefTarget: "#section5",
+        hrefTargetName: "section5",
+      },
+    ],
+  },
 
   vegetarianWording: "(végétarien) ",
   veganWording: "(végan) ",

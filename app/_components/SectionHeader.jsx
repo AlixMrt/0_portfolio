@@ -16,10 +16,10 @@ export default function SectionHeader({
       <h2 className={`heading-2 ${headingColor} `}>{headingText}</h2>
       {headingSubText && <h3>{headingSubText}</h3>}
       <Image
-        src={"text-divider/text-divider.svg"}
+        src={"svg/section-divider-black.svg"}
         height={85}
         width={150}
-        alt="ornemental decoration for a section"
+        alt="ornamental decoration for a section"
       />
     </div>
   );

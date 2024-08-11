@@ -3,7 +3,7 @@
 @use "sizes" as *;
 
 $active-theme: $light;
-$enable-media-query-dark-mode: false;
+$enable-media-query-dark-mode: true;
 
 // Contextual
 $color-text-default: $color-neutral-700;
@@ -73,7 +73,7 @@ $grid-gap: $size-10;
 $flex-group-gap: $size-4;
 
 $hero-padding-block: clamp(15rem, 15vh, 20rem);
-$section-padding-block: clamp(3rem, 10%, 6rem);
+$section-padding-block: clamp(3rem, 8%, 6rem);
 
 $container-min-margin-inline: $size-4;
 
@@ -194,7 +194,7 @@ $menu-item-font-weight: $font-weight-bold;
 $menu-item-font-family: $font-family-accent;
 $menu-item-font-size: $font-size-500;
 $menu-item-dash-color: $color-neutral-900;
-$menu-item-description-color: $color-neutral-500;
+$menu-item-description-color: $color-neutral-900;
 
 // forms
 $form-label-color: $body-text-color;

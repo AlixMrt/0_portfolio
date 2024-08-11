@@ -61,8 +61,9 @@ export default function Home() {
   return (
     <>
       <SideNavbar
-        sideNavLinks={data.sideNavLinks}
+        sideNavLinks={data.navBar.links}
         activeSection={activeSection}
+        imageSrc={data.pageHeading.imageLink}
       />
       <main>
         <div id="section1" className="navSection">
@@ -73,12 +74,14 @@ export default function Home() {
             heroSecondaryHeadingText={data.pageHeading.pageSubtitle}
             imageSrc={data.pageHeading.imageLink}
             imageDescription={data.pageHeading.imageDescription}
+            ornamentImgSrc={data.pageHeading.ornamentLink}
+            ornamentImgDescription={data.pageHeading.ornamentDescription}
             handleLanguageClick={handleLanguageStateChange}
             languagesButtons={data.languagesButtons}
             activeLanguage={currentLanguage}
           />
         </div>
-        <Menu
+        {/* <Menu
           id="section2"
           dishesArray={data.dishesArray}
           dishesCategoriesArray={data.dishesCategoriesArray}
@@ -87,7 +90,7 @@ export default function Home() {
         />
         <MenuWindowedOneColumn
           id="section2"
-          headingText={data.sideNavLinks[0].name}
+          headingText={data.navBar.links[0].name}
           dishesArray={data.dishesArray}
           dishesCategoriesArray={data.dishesCategoriesArray}
           // vegetarianWording={data.vegetarianWording}
@@ -95,16 +98,16 @@ export default function Home() {
         />
         <MenuWindowedTwoColumns
           id="section2"
-          headingText={data.sideNavLinks[0].name}
+          headingText={data.navBar.links[0].name}
           dishesArray={data.dishesArray}
           dishesCategoriesArray={data.dishesCategoriesArray}
           // vegetarianWording={data.vegetarianWording}
           // veganWording={data.veganWording}
-        />
+        /> */}
 
         <OrganizedMenu
           id="section2"
-          headingText={data.sideNavLinks[0].name}
+          headingText={data.navBar.links[0].name}
           menusArray={data.menusArray}
           menusCategoriesArray={data.menusCategoriesArray}
           menusOtherCategoriesArray={data.menusOtherCategoriesArray}
@@ -114,24 +117,24 @@ export default function Home() {
 
         <AboutUs
           id="section3"
-          headingText={data.sideNavLinks[1].name}
+          headingText={data.navBar.links[1].name}
           aboutUsData={data.descriptionArray}
         />
         <ImageSlider
           id="section4"
-          headingText={data.sideNavLinks[2].name}
+          headingText={data.navBar.links[2].name}
           imagesArray={data.imagesArray}
         />
         {/* <ImagesSection
           id="section4"
-          headingText={data.sideNavLinks[2].name}
+          headingText={data.navBar.links[2].name}
           imagesArray={data.imagesArray}
         /> */}
 
         <FindUsHorizontal
           id="section5"
           data={data}
-          headingText={data.sideNavLinks[3].name}
+          headingText={data.navBar.links[3].name}
           findUsData={data.findUs}
           openingTimeSlotArray={data.openingTimeSlotsArray}
         />

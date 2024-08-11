@@ -13,7 +13,7 @@ export default function PageHeading({
       <h1 className="heading-1 |  text-center">{mainHeading}</h1>
       <div className="heading-divider"></div>
       <div className="sub-headings">
-        <h2 className="heading-2 clr-neutral-1000 ff-base fs-600 text-center">
+        <h2 className="heading-2 ff-base fs-600 text-center">
           {secondaryHeading}
         </h2>
       </div>
