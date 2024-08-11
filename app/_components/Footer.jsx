@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-copyright ">
-          <p>2024 Au Vieux Chêne. All Rights reserved.</p>
+          <p>Au Vieux Chêne. All Rights reserved. 2024</p>
         </div>
       </div>
     </footer>

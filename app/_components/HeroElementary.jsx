@@ -1,6 +1,6 @@
 import Image from "next/image";
 import PageHeading from "./PageHeading";
-import frameOrnament from "/public/svg/frameOrnament.svg";
+import frameOrnament from "/public/svg/fleur.svg";
 import LanguageHeader from "./LanguageHeader";
 export default function HeroElementary({
   heroPadding,
