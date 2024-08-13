@@ -1,19 +1,17 @@
 import SectionHeader from "./SectionHeader";
 import SocialMedia from "./SocialMedia";
 
-export default function FindUsHorizontal({
+export default function FindUs({
   id,
   headingText,
   findUsData,
-  openingTimeSlotArray,
+  openingHours,
+  socialMedia,
 }) {
   const { street, city, phoneNumber, email } = findUsData;
 
   return (
-    <section
-      id={id}
-      className="section navSection find-us-horizontal | clr-neutral-900 text-center"
-    >
+    <section id={id} className="section navSection find-us | text-center">
       <div className="container" data-type="wide">
         <SectionHeader
           headingText={headingText}
@@ -24,7 +22,7 @@ export default function FindUsHorizontal({
             <div className={`find-us__card | center-children `}>
               <h3 className="heading-3 | card-header__text">Horaires</h3>
               <div className="card-main card-hours">
-                {openingTimeSlotArray.map((openingTimeSlot) => {
+                {openingHours.map((openingTimeSlot) => {
                   return (
                     <div key={openingTimeSlot.days}>
                       <p className="days">{openingTimeSlot.days}</p>
@@ -49,7 +47,7 @@ export default function FindUsHorizontal({
             </div>
           </div>
 
-          <SocialMedia />
+          <SocialMedia socialMedia={socialMedia} />
         </div>
       </div>
     </section>

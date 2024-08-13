@@ -1,30 +1,40 @@
 const data = {
-  languagesButtons: {
-    language1: "french",
-    language2: "english",
-  },
-
-  sideNavLinks: [
-    // { name: "Accueil", hrefTarget: "#section1", hrefTargetName: "section1" },
-    { name: "Menu", hrefTarget: "#section2", hrefTargetName: "section2" },
-    {
-      name: "About us",
-      hrefTarget: "#section3",
-      hrefTargetName: "section3",
-    },
-    { name: "Gallery", hrefTarget: "#section4", hrefTargetName: "section4" },
-    { name: "Find us", hrefTarget: "#section5", hrefTargetName: "section5" },
-  ],
-
-  vegetarianWording: "(vegetarian) ",
-  veganWording: "(vegan) ",
-
   pageHeading: {
     pageTitle: "Au Vieux Chêne",
     pageSubtitle: "Gourmet restaurant in Fontainebleau",
     imageDescription: "a logo of an old oak symbol of our restaurant",
     imageLink: "/svg/tree.svg",
+    ornamentLink: "/svg/ornament-black.svg",
+    ornamentDescription: "small ornamental element",
   },
+
+  languagesButtons: {
+    language1: "french",
+    language2: "english",
+  },
+
+  navBar: {
+    imageLink: "/svg/tree-gold.svg",
+    imageDescription: "a logo of an old oak symbol of our restaurant",
+    links: [
+      // { name: "Accueil", hrefTarget: "#section1", hrefTargetName: "section1" },
+      { name: "Menu", hrefTarget: "#section2", hrefTargetName: "section2" },
+      {
+        name: "About us",
+        hrefTarget: "#section3",
+        hrefTargetName: "section3",
+      },
+      { name: "Gallery", hrefTarget: "#section4", hrefTargetName: "section4" },
+      {
+        name: "Find us",
+        hrefTarget: "#section5",
+        hrefTargetName: "section5",
+      },
+    ],
+  },
+
+  vegetarianWording: "(vegetarian) ",
+  veganWording: "(vegan) ",
 
   descriptionArray: {
     restaurant: {
@@ -49,24 +59,6 @@ const data = {
       imageLink: "chef.png",
     },
   },
-
-  findUs: {
-    street: "46 rue de Bourgogne",
-    city: "Fontainebleau",
-    phoneNumber: "01 46 37 28 36",
-    email: "LeVieuxChene@contact.com",
-  },
-
-  openingTimeSlotsArray: [
-    {
-      days: "Tuesday to Friday",
-      hours: "from 11 AM to 2 PM & from 6 PM to 10 PM",
-    },
-    {
-      days: "Saturday & Sunday",
-      hours: "from 5 PM to 10 PM",
-    },
-  ],
 
   dishesCategoriesArray: [["Entrées"], ["Plats"], ["Desserts"], ["Vins"]],
 
@@ -529,6 +521,24 @@ const data = {
       category: "Entrée",
       description: "Coffee & Vanilla Mascarpone",
       number: 6,
+    },
+  ],
+
+  findUs: {
+    street: "46 rue de Bourgogne",
+    city: "Fontainebleau",
+    phoneNumber: "01 46 37 28 36",
+    email: "LeVieuxChene@contact.com",
+  },
+
+  openingTimeSlotsArray: [
+    {
+      days: "Tuesday to Friday",
+      hours: "from 11 AM to 2 PM & from 6 PM to 10 PM",
+    },
+    {
+      days: "Saturday & Sunday",
+      hours: "from 5 PM to 10 PM",
     },
   ],
 };

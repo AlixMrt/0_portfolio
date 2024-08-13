@@ -70,70 +70,76 @@ const data = {
   dishesArray: {
     Entrées: [
       {
-        name: "Velouté de Potiron",
-        price: "10",
-        description:
-          "Rouge vif d’Étampes, oignons caramélisés, bouquet d'épices et crème fraîche",
-        // isVegetarian: "true",
+        name: "Salade Parisienne",
+        description: "Laitue, jambon, emmental, croûtons, œufs durs & tomates",
       },
       {
-        name: "Salade Parisienne",
-        price: "14",
-        description:
-          "Laitue, jambon, emmental, croûtons, œufs durs, tomates et vinaigrette",
+        name: "Velouté de Potiron",
+        description: "Rouge vif d’Étampes, oignons caramélisés & crème fraîche",
+        isVegetarian: "true",
       },
       {
         name: "Salade Franc-Comtoise",
-        price: "14",
         description:
-          "Feuille de chêne, pommes de terre, saucisse de Morteau, comté, noix ",
+          "Feuille de chêne, pommes de terre, saucisse de Morteau, comté & noix",
       },
-
       {
-        name: "Tartare de Saumon",
-        price: "16",
+        name: "Charcuterie Auvergnate",
         description:
-          "Saumon mariné, aneth, échalotes, zeste de citron, servis avec ses croûtons croustillants",
+          "Assortiment de jambon, saucisson et terrine accompagné de cornichons & d'oignons",
+      },
+      {
+        name: "Foie Gras",
+        description: "Pâté de foie gras avec  chutney &  pain de seigle",
+      },
+      {
+        name: "Soufflés au Brochet",
+
+        description:
+          "Gourmandise légère de poisson cuite au four & parfumée aux herbes",
       },
     ],
     Plats: [
       {
         name: "Ratatouille Provençale",
-        price: "22",
-        description:
-          "Mijoté de légumes méditerranéens (aubergines, courgettes, poivrons, tomates) aux herbes de Provence",
+        description: "Mijoté de légumes méditerranéens aux herbes de Provence",
         isVegetarian: "true",
       },
       {
         name: "Risotto aux Champignons",
-        price: "24",
-        description:
-          "Arborio, cèpes et champignons sauvages, bouillon de légumes, parmesan, persil",
+        description: "Arborio, cèpes sauvages, bouillon de légumes & parmesan",
         isVegetarian: "true",
       },
       {
         name: "Truite Meunière",
-        price: "24",
+        description: "Filet doré au beurre, amandes grillées & persil",
+      },
+
+      {
+        name: "Bœuf Bourguignon",
         description:
-          "Filet doré à la poêle dans du beurre, amandes grillées, persil, citron",
+          "Viande mijotée, vin rouge, carottes, oignons & lardons fumés",
       },
       {
         name: "Moules Marinières",
-        price: "26",
         description:
-          "Moules fraîches cuites dans un bouillon de vin blanc, ail, échalotes, persil, accompagnées de frites",
+          "Moules cuites au vin blanc accompagnées de pommes de terre frites",
       },
+
       {
-        name: "Bœuf Bourguignon ",
-        price: "26",
+        name: "Côte de Bœuf",
         description:
-          "Viande de boeuf mijotée, vin rouge, carottes, oignons, lardons fumés, champignons",
+          "Côte de bœuf maturée accompagnée de légumes rôtis et d'une sauce au poivre",
       },
       {
         name: "Confit de Canard",
-        price: "26",
         description:
-          "Cuisse confite dans sa graisse, servi avec des pommes de terre sautées et une sauce au jus de viande",
+          "Cuisse confite dans sa graisse, servie avec des pommes de terre sautées",
+      },
+      {
+        name: "Homard Thermidor",
+        description:
+          "Viande de homard en sauce crémeuse au vin, moutarde & fromage",
       },
     ],
     Desserts: [

@@ -5,23 +5,29 @@ import Image from "next/image";
 import Link from "next/link";
 import SectionHeader from "./SectionHeader";
 
-export default function Footer() {
+export default function Footer({
+  mainTitle,
+  subTitle,
+  paragraphText,
+  optionalTextDivider,
+}) {
   return (
     <footer className="site-footer">
       <div className="container center-children" data-type="full-bleed">
         <div className="footer-brand | center-children mx-auto">
           <Link href="/">
             <SectionHeader
-              headingText={"Au Vieux Chêne"}
+              headingText={mainTitle}
               headingColor="clr-neutral-000"
-              headingSubText="Restaurant Gastronomique - Fontainebleau"
+              headingSubText={subTitle}
               marginBlockEnd="1"
+              optionalTextDivider={optionalTextDivider}
             />
           </Link>
         </div>
 
         <div className="footer-copyright ">
-          <p>Au Vieux Chêne. All Rights reserved. 2024</p>
+          <p>{paragraphText}</p>
         </div>
       </div>
     </footer>

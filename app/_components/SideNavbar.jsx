@@ -1,15 +1,21 @@
-const Navbar = ({ sideNavLinks, activeSection }) => {
+const SideNavbar = ({
+  sideNavLinks,
+  activeSection,
+  imageSrc,
+  imageDescription,
+  heading,
+}) => {
   return (
     <nav className="site-side-navbar">
       <div className="site-side-navbar-container">
         <a href="#section1" className="logo-container">
-          <img className={` mx-auto`} src="/svg/tree-gold.svg" alt="" />
+          <img className={` mx-auto`} src={imageSrc} alt={imageDescription} />
           <h4
             className={` side-navbar-link heading-4 ${
               activeSection === "section1" ? "activeSideNavLink" : ""
             }`}
           >
-            Au Vieux Chêne
+            {heading}
           </h4>
         </a>
 
@@ -40,4 +46,4 @@ const Navbar = ({ sideNavLinks, activeSection }) => {
   );
 };
 
-export default Navbar;
+export default SideNavbar;

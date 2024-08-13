@@ -4,17 +4,17 @@ import MenuItem2 from "./menuItem-2";
 
 export default function Menu({
   id,
+  headingText,
   dishesArray,
   dishesCategoriesArray,
   vegetarianWording,
   veganWording,
 }) {
   // const { Entrées, Plats, Desserts, Vins } = dishesArray;
-  console.log(dishesCategoriesArray);
   return (
     <section id={id} className="section | navSection menu bg-neutral-000">
       <div className="container" data-type="regular">
-        <SectionHeader headingText="Menu" displayDecoration />
+        <SectionHeader headingText={headingText} displayDecoration />
 
         <div className="menu-menu ">
           {dishesCategoriesArray.map((dishCategory, index) => {

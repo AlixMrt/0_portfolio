@@ -13,15 +13,15 @@ import SideNavbar from "./_components/SideNavbar";
 // Hero
 import HeroElementary from "./_components/HeroElementary";
 // Restaurant Menu
-import Menu from "./_components/Menu";
-import MenuWindowedOneColumn from "./_components/MenuWindowedOneColumn";
-import MenuWindowedTwoColumns from "./_components/MenuWindowedTwoColumns";
+import CarteExhaustive from "./_components/CarteExhaustive";
+import CarteOneColumn from "./_components/CarteOneColumn";
+import CarteTwoColumns from "./_components/CarteTwoColumns";
 // About us
 import AboutUs from "./_components/AboutUs";
 // Gallery
 import ImagesSection from "./_components/ImagesSection";
 // Find us
-import FindUsHorizontal from "./_components/FindUsHorizontal";
+import FindUs from "./_components/FindUs";
 // Footer
 import Footer from "./_components/Footer";
 import ImageSlider from "./_components/ImageSlider_1";
@@ -58,59 +58,62 @@ export default function Home() {
     }
   };
 
+  console.log(data.findUs.socialMedia);
+
   return (
     <>
       <SideNavbar
         sideNavLinks={data.navBar.links}
         activeSection={activeSection}
-        imageSrc={data.pageHeading.imageLink}
+        imageSrc={data.navBar.imageLink}
+        imageDescription={data.navBar.imageDescription}
+        heading={data.navBar.heading}
       />
       <main>
         <div id="section1" className="navSection">
           <HeroElementary
-            columnLayout="even-columns"
-            heroBackgroundColor={"bg-neutral-000"}
-            heroHeadingText={data.pageHeading.pageTitle}
-            heroSecondaryHeadingText={data.pageHeading.pageSubtitle}
-            imageSrc={data.pageHeading.imageLink}
-            imageDescription={data.pageHeading.imageDescription}
-            ornamentImgSrc={data.pageHeading.ornamentLink}
-            ornamentImgDescription={data.pageHeading.ornamentDescription}
+            heroHeadingText={data.hero.pageTitle}
+            heroSecondaryHeadingText={data.hero.pageSubtitle}
+            imageSrc={data.hero.imageLink}
+            imageDescription={data.hero.imageDescription}
+            ornamentImgSrc={data.hero.ornamentLink}
+            ornamentImgDescription={data.hero.ornamentDescription}
             handleLanguageClick={handleLanguageStateChange}
-            languagesButtons={data.languagesButtons}
+            languagesButtons={data.hero.languagesButtons}
             activeLanguage={currentLanguage}
           />
         </div>
-        {/* <Menu
+        <CarteExhaustive
           id="section2"
-          dishesArray={data.dishesArray}
-          dishesCategoriesArray={data.dishesCategoriesArray}
+          headingText={data.navBar.links[0].name}
+          dishesArray={data.carte.dishesArray}
+          dishesCategoriesArray={data.carte.dishesCategoriesArray}
           // vegetarianWording={data.vegetarianWording}
           // veganWording={data.veganWording}
         />
-        <MenuWindowedOneColumn
+        <CarteOneColumn
           id="section2"
           headingText={data.navBar.links[0].name}
-          dishesArray={data.dishesArray}
-          dishesCategoriesArray={data.dishesCategoriesArray}
+          dishesArray={data.carte.dishesArray}
+          dishesCategoriesArray={data.carte.dishesCategoriesArray}
           // vegetarianWording={data.vegetarianWording}
           // veganWording={data.veganWording}
         />
-        <MenuWindowedTwoColumns
+        <CarteTwoColumns
           id="section2"
           headingText={data.navBar.links[0].name}
-          dishesArray={data.dishesArray}
-          dishesCategoriesArray={data.dishesCategoriesArray}
+          dishesArray={data.carte.dishesArray}
+          dishesCategoriesArray={data.carte.dishesCategoriesArray}
           // vegetarianWording={data.vegetarianWording}
           // veganWording={data.veganWording}
-        /> */}
+        />
 
         <OrganizedMenu
           id="section2"
           headingText={data.navBar.links[0].name}
-          menusArray={data.menusArray}
-          menusCategoriesArray={data.menusCategoriesArray}
-          menusOtherCategoriesArray={data.menusOtherCategoriesArray}
+          menusArray={data.menu.menusArray}
+          menusCategoriesArray={data.menu.menusCategoriesArray}
+          menusOtherCategoriesArray={data.menu.menusOtherCategoriesArray}
           // vegetarianWording={data.vegetarianWording}
           // veganWording={data.veganWording}
         />
@@ -118,28 +121,33 @@ export default function Home() {
         <AboutUs
           id="section3"
           headingText={data.navBar.links[1].name}
-          aboutUsData={data.descriptionArray}
+          aboutUsData={data.aboutUs.descriptionArray}
         />
         <ImageSlider
           id="section4"
           headingText={data.navBar.links[2].name}
-          imagesArray={data.imagesArray}
+          imagesArray={data.gallery.imagesArray}
         />
         {/* <ImagesSection
           id="section4"
           headingText={data.navBar.links[2].name}
-          imagesArray={data.imagesArray}
+          imagesArray={data.gallery.imagesArray}
         /> */}
 
-        <FindUsHorizontal
+        <FindUs
           id="section5"
-          data={data}
           headingText={data.navBar.links[3].name}
-          findUsData={data.findUs}
-          openingTimeSlotArray={data.openingTimeSlotsArray}
+          findUsData={data.findUs.address}
+          openingHours={data.findUs.openingHours}
+          socialMedia={data.findUs.socialMedia}
         />
       </main>
-      <Footer />
+      <Footer
+        mainTitle={data.footer.mainTitle}
+        subTitle={data.footer.subTitle}
+        paragraphText={data.footer.paragraphText}
+        optionalTextDivider={data.footer.optionalTextDivider}
+      />
     </>
   );
 }

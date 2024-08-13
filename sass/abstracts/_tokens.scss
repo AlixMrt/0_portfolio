@@ -9,7 +9,7 @@ $enable-media-query-dark-mode: true;
 $color-text-default: $color-neutral-700;
 $color-background-default: $color-neutral-000;
 $color-text-interactive-default: $color-neutral-000;
-$color-text-interactive-hover: $color-accent-400;
+$color-text-interactive-hover: $color-neutral-000;
 
 // set to 0 to disable
 $letter-spacing-loose: 0;
@@ -117,8 +117,11 @@ $site-side-navbar-width: 15vw;
 // Small Screens Height
 $site-side-navbar-height: 12vh;
 
-// find us
-$find-us-background-color: $color-neutral-000;
+// HERO ELEMENTARY
+$hero-elementary-background-color: $color-neutral-100;
+
+// FIND US
+$find-us-background-color: $color-neutral-100;
 
 // site footer
 $site-footer-padding: $size-13 0 $size-8 0;

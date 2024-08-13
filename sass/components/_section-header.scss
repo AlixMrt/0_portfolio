@@ -9,6 +9,9 @@
   }
 
   p {
+    text-align: center;
+  }
+  p {
     @include mq(medium) {
       max-width: 36vw;
       margin-inline: auto;

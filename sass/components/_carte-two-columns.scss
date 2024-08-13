@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 
-.menu-windowed-two-columns {
+.carte-two-columns {
   .menu-title {
     margin-bottom: 2rem;
     text-align: center;
@@ -58,6 +58,5 @@
   .menu-menu {
     border: 3px solid $color-neutral-1000;
     box-shadow: $box-shadow-8;
-  
   }
 }

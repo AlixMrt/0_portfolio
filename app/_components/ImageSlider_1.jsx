@@ -49,8 +49,9 @@ export default function ImageSlider({ id, headingText, imagesArray }) {
           </div>
           <div className="slider-controls">
             <button
-              className="button"
+              className={`button ${currentImageIndex === 0 && "disabled"}`}
               onClick={() => handleArrowClick("previousImage")}
+              disabled={currentImageIndex === 0}
             >
               &lt;
             </button>
@@ -60,8 +61,11 @@ export default function ImageSlider({ id, headingText, imagesArray }) {
               </p>
             </div>
             <button
-              className={"button"}
+              className={`button ${
+                currentImageIndex === imagesArray.length - 1 && "disabled"
+              }`}
               onClick={() => handleArrowClick("nextImage")}
+              disabled={currentImageIndex === imagesArray.length - 1}
             >
               &gt;
             </button>

@@ -76,17 +76,24 @@ export default function OrganizedMenu({
                     <div className="menu_menu_items">
                       {menusArray[displayedMenu].menuCategories[
                         menuCategory
-                      ].map((dish, index) => (
-                        <MenuItem2
-                          key={dish.name + index}
-                          name={dish.name}
-                          description={dish.description}
-                          isVegetarian={dish.isVegetarian}
-                          isVegan={dish.isVegan}
-                          vegetarianWording={vegetarianWording}
-                          veganWording={veganWording}
-                        />
-                      ))}
+                      ].map((dish, index) => {
+                        let price = null;
+                        if (dish.price) {
+                          price = dish.price;
+                        }
+                        return (
+                          <MenuItem2
+                            key={dish.name + index}
+                            name={dish.name}
+                            description={dish.description}
+                            isVegetarian={dish.isVegetarian}
+                            vegetarianWording={vegetarianWording}
+                            isVegan={dish.isVegan}
+                            veganWording={veganWording}
+                            price={price}
+                          />
+                        );
+                      })}
                     </div>
                   </div>
                 );

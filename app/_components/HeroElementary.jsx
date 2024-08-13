@@ -17,11 +17,11 @@ export default function HeroElementary({
 }) {
   return (
     <section className={`hero-elementary | ${heroBackgroundColor} `}>
-      {/* <LanguageHeader
+      <LanguageHeader
         handleLanguageClick={handleLanguageClick}
         activeLanguage={activeLanguage}
         languagesButtons={languagesButtons}
-      /> */}
+      />
 
       <div className="container | hero-elementary-container" data-type="narrow">
         <div className="content-container box-shadow-8">

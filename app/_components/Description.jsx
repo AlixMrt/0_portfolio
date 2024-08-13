@@ -21,7 +21,7 @@ export default function Description({
       <div className={`container`} data-type="wide">
         <BlockWithImage
           backgroundColor={findUsInnerBgColor}
-          imageSrc={`/images/${imageLink}`}
+          imageSrc={`/images/about/${imageLink}`}
           imageDescription={imageDescription}
           imageStyling={imageStyling}
           imagePosition={imagePosition}

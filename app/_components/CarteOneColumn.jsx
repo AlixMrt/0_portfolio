@@ -5,7 +5,7 @@ import SectionHeader from "./SectionHeader";
 import MenuItem1 from "./menuItem-1";
 import MenuItem2 from "./menuItem-2";
 
-export default function MenuWindowedTwoColumns({
+export default function CarteOneColumn({
   id,
   headingText,
   dishesArray,
@@ -29,9 +29,9 @@ export default function MenuWindowedTwoColumns({
   return (
     <section
       id={id}
-      className="section navSection | menu-windowed-two-columns bg-neutral-000"
+      className="section navSection | carte-one-column menu-windowed-one-column bg-neutral-000"
     >
-      <div className="container" data-type="wide">
+      <div className="container" data-type="regular">
         <SectionHeader headingText={headingText} displayDecoration />
 
         <ul className="menu-windowed-links ">
