@@ -53,7 +53,7 @@ export default function ImageSlider({ id, headingText, imagesArray }) {
               onClick={() => handleArrowClick("previousImage")}
               disabled={currentImageIndex === 0}
             >
-              &lt;
+              <img src="/svg/arrows/arrow-left.svg" alt="left arrow slider" />
             </button>
             <div className="slider-index">
               <p>
@@ -67,7 +67,7 @@ export default function ImageSlider({ id, headingText, imagesArray }) {
               onClick={() => handleArrowClick("nextImage")}
               disabled={currentImageIndex === imagesArray.length - 1}
             >
-              &gt;
+              <img src="/svg/arrows/arrow-right.svg" alt="right arrow slider" />
             </button>
           </div>
         </div>

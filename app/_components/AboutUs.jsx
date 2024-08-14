@@ -7,11 +7,7 @@ export default function AboutUs({ id, headingText, aboutUsData }) {
       id={id}
       className="section navSection | about-us clr-neutral-900 bg-neutral-000 "
     >
-      <SectionHeader
-        headingText={headingText}
-        marginBlockEnd="0"
-        displayDecoration
-      />
+      <SectionHeader headingText={headingText} marginBlockEnd="0" />
 
       <Description
         fontColor="clr-neutral-1000"

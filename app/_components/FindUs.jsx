@@ -4,11 +4,11 @@ import SocialMedia from "./SocialMedia";
 export default function FindUs({
   id,
   headingText,
-  findUsData,
+  address,
   openingHours,
   socialMedia,
 }) {
-  const { street, city, phoneNumber, email } = findUsData;
+  const { street, city, phoneNumber, email } = address;
 
   return (
     <section id={id} className="section navSection find-us | text-center">

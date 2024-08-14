@@ -1,5 +1,6 @@
 // Display Vegetarian / Vegan tag on dishes
 // Choose between Menu & A la carte (different display options)
+// Choose between MenuItem1 and MenuItem2
 // Choose Logo
 // Choose ornaments (hero section)
 // Choose ornament (text-divider)
@@ -12,6 +13,7 @@ const websiteName = "Au Vieux Chêne";
 const city = "Fontainebleau";
 const street = "46 rue de Bourgogne";
 const definition = "Restaurant Gastronomique";
+const websiteSubtitle = { city: city, definition: definition };
 const phoneNumber = "01 46 37 28 36";
 const email = "AuVieuxChene@contact.com";
 const openingHours = [
@@ -52,12 +54,6 @@ const defaultOrnamentSrc = "svg/ornament/ornament-black.svg";
 const data = {
   //
   // //
-  // // // LANGUAGES
-  // //
-  //
-
-  //
-  // //
   // // // NAVIGATION BAR
 
   navBar: {
@@ -87,7 +83,7 @@ const data = {
   // // // HERO
   hero: {
     pageTitle: websiteName,
-    pageSubtitle: definition + " " + city,
+    pageSubtitle: websiteSubtitle,
     imageLink: defaultHeroLogo,
     imageDescription: logoDescription,
     ornamentLink: defaultOrnamentSrc,
@@ -167,12 +163,12 @@ const data = {
           name: "Trio de Fromages",
           price: 12,
           description:
-            "Brie, Bleu des Causses & Chèvre cendré accompagnés de figues & de noix",
+            "Brie, Bleu des Causses, Chèvre cendré avec figues &  noix",
         },
         {
           name: "Charlotte aux Fraises",
           price: 14,
-          description: "Boudoirs, crème mouseuse & décoration de fraises",
+          description: "Boudoirs, crème mousseuse & décoration de fraises",
         },
         {
           name: "Opéra",
@@ -275,7 +271,7 @@ const data = {
             {
               name: "Trio de Fromages",
               description:
-                "Brie, Bleu des Causses & Chèvre cendré accompagnés de figues & de noix",
+                "Brie, Bleu des Causses, Chèvre cendré avec figues & noix",
             },
             {
               name: "Tarte Tatin",
@@ -338,7 +334,7 @@ const data = {
             },
             {
               name: "Charlotte aux Fraises",
-              description: "Boudoirs, crème mouseuse & décoration de fraises",
+              description: "Boudoirs, crème mousseuse & décoration de fraises",
             },
             {
               name: "Île Flotante",
@@ -596,7 +592,7 @@ const data = {
   // // // FOOTER
   footer: {
     mainTitle: websiteName,
-    subTitle: `${definition} - ${city}`,
+    subTitle: `${definition}`,
     paragraphText: `${websiteName}. All Rights reserved. 2024`,
     optionalTextDivider: "svg/text-divider/text-divider-white.svg",
   },

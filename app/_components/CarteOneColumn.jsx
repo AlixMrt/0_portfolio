@@ -32,7 +32,7 @@ export default function CarteOneColumn({
       className="section navSection | carte-one-column menu-windowed-one-column bg-neutral-000"
     >
       <div className="container" data-type="regular">
-        <SectionHeader headingText={headingText} displayDecoration />
+        <SectionHeader headingText={headingText} />
 
         <ul className="menu-windowed-links ">
           {dishCategories.map((category, index) => {
@@ -56,7 +56,7 @@ export default function CarteOneColumn({
             <div className="menu-windowed-divider"></div>
             <div className="menu_menu_items">
               {dishesArray[displayedDishCategory].map((item, index) => (
-                <MenuItem2
+                <MenuItem1
                   key={item.name + index}
                   name={item.name}
                   price={item.price}

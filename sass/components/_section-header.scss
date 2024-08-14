@@ -3,6 +3,7 @@
 .section-header {
   display: grid;
   justify-items: center;
+  gap: 0.5em;
 
   .heading-2 {
     text-align: center;
@@ -10,11 +11,6 @@
 
   p {
     text-align: center;
-  }
-  p {
-    @include mq(medium) {
-      max-width: 36vw;
-      margin-inline: auto;
-    }
+    font-weight: 300;
   }
 }

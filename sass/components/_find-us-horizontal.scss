@@ -5,7 +5,7 @@
   .find-us-content {
     display: flex;
     flex-direction: column;
-    gap: 4em;
+    gap: 1em;
 
     @include mq(medium) {
       gap: 6em;

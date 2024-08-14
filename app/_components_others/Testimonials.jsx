@@ -29,10 +29,7 @@ export default function Testimonials() {
   return (
     <section className="testimonials section text-center">
       <div className="container" data-type="wide">
-        <SectionHeader
-          headingText="Ce que nos clients disent de nous"
-          displayDecoration
-        />
+        <SectionHeader headingText="Ce que nos clients disent de nous" />
 
         <div className="even-columns">
           {cardsArray.map((card, index) => {

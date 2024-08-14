@@ -1,28 +1,33 @@
 @use "../abstracts" as *;
 
 .page-heading {
-  padding: 2em 1em 0 1em;
+  padding: 2em 0em 0 0em;
   display: grid;
-  gap: 0.8em;
+  gap: 1em;
 
   h1 {
-    color: $color-accent-500;
+    color: $color-neutral-1000;
   }
 
   .heading-divider {
     height: 2px;
     width: 25%;
-    background-color: $color-neutral-900;
+    background-color: $color-accent-500;
+  }
+
+  img {
+    width: 30%;
+    height: 30%;
   }
 
   .sub-headings {
     display: grid;
-    padding: 1.5em 1em 1.5em 1em;
     gap: 0.6em;
 
-    h2 {
-      font-weight: 500;
+    p {
+      font-weight: 300;
       color: $color-neutral-800;
+      line-height: 1.4;
     }
   }
 }

@@ -15,10 +15,11 @@
     border: solid 1px $color-accent-500;
   }
   .content-container {
+    background-color: white;
     display: flex;
     flex-direction: column;
     border: 1px solid $color-neutral-1000;
-    padding: 1em 2em;
+    padding: 2em 2em;
     position: relative;
 
     .hero-image {

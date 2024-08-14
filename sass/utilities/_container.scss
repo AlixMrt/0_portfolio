@@ -26,6 +26,9 @@
 .container[data-type="narrow"] {
   --max-width: #{$container-max-width-narrow};
 }
+.container[data-type="mid"] {
+  --max-width: #{$container-max-width-mid};
+}
 .container[data-type="regular"] {
   --max-width: #{$container-max-width-regular};
 }

@@ -35,7 +35,7 @@ export default function Labels() {
   return (
     <section className="section text-center bg-primary-100">
       <div className="container">
-        <SectionHeader headingText="Our services" displayDecoration={false} />
+        <SectionHeader headingText="Our services" />
 
         <div className="grid-auto-fit | margin-block-end-10">
           {labelsArray.map((service, index) => {

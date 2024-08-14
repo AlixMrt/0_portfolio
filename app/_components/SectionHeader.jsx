@@ -5,21 +5,11 @@ export default function SectionHeader({
   headingText,
   headingSubText,
   headingColor,
-  displayDecoration,
-  decorationColor,
   marginBlockEnd = "10",
   optionalTextDivider = null,
 }) {
-  //
-  //
-
-  //
-  //
   return (
-    <div
-      className={`section-header ${decorationColor} margin-block-end-${marginBlockEnd}`}
-      data-decoration={displayDecoration}
-    >
+    <div className={`section-header  margin-block-end-${marginBlockEnd}`}>
       <h2 className={`heading-2 ${headingColor} `}>{headingText}</h2>
       {headingSubText && <p>{headingSubText}</p>}
       <Image

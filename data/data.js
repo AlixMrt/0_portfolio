@@ -94,7 +94,6 @@ const data = {
       },
       {
         name: "Soufflés au Brochet",
-
         description:
           "Gourmandise légère de poisson cuite au four & parfumée aux herbes",
       },

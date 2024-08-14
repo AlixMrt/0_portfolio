@@ -18,7 +18,7 @@ export default function menuItem1({
         </div>
         <div className="item-dash" />
         <div className="item-price">
-          <p>{price && `- ${price}€`}</p>
+          <p>{price && `${price}€`}</p>
         </div>
       </div>
       <div className="item-description">

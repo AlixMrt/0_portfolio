@@ -58,8 +58,6 @@ export default function Home() {
     }
   };
 
-  console.log(data.findUs.socialMedia);
-
   return (
     <>
       <SideNavbar
@@ -137,7 +135,7 @@ export default function Home() {
         <FindUs
           id="section5"
           headingText={data.navBar.links[3].name}
-          findUsData={data.findUs.address}
+          address={data.findUs.address}
           openingHours={data.findUs.openingHours}
           socialMedia={data.findUs.socialMedia}
         />

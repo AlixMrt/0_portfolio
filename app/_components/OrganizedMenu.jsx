@@ -21,7 +21,7 @@ export default function OrganizedMenu({
       className="section navSection | organized-menu bg-neutral-000"
     >
       <div className="container" data-type="regular">
-        <SectionHeader headingText={headingText} displayDecoration />
+        <SectionHeader headingText={headingText} />
 
         <ul className="menu-windowed-links">
           {menusCategoriesArray.map((menuCategory, index) => {

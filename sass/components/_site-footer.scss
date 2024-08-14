@@ -10,16 +10,11 @@
 
   .footer-main-content {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 100%;
+    gap: 2em;
   }
 
   .footer-brand {
-    display: grid;
-
     h2 {
-      text-align: center;
       color: $color-accent-500;
     }
   }

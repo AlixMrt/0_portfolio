@@ -14,7 +14,7 @@ export default function Menu({
   return (
     <section id={id} className="section | navSection menu bg-neutral-000">
       <div className="container" data-type="regular">
-        <SectionHeader headingText={headingText} displayDecoration />
+        <SectionHeader headingText={headingText} />
 
         <div className="menu-menu ">
           {dishesCategoriesArray.map((dishCategory, index) => {

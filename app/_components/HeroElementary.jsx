@@ -2,11 +2,8 @@ import Image from "next/image";
 import PageHeading from "./PageHeading";
 import LanguageHeader from "./LanguageHeader";
 export default function HeroElementary({
-  heroPadding,
-  heroBackgroundColor,
   heroHeadingText,
   heroSecondaryHeadingText,
-  heroText,
   imageSrc,
   imageDescription,
   ornamentImgSrc,
@@ -16,14 +13,14 @@ export default function HeroElementary({
   languagesButtons,
 }) {
   return (
-    <section className={`hero-elementary | ${heroBackgroundColor} `}>
+    <section className={`hero-elementary `}>
       <LanguageHeader
         handleLanguageClick={handleLanguageClick}
         activeLanguage={activeLanguage}
         languagesButtons={languagesButtons}
       />
 
-      <div className="container | hero-elementary-container" data-type="narrow">
+      <div className="container | hero-elementary-container" data-type="mid">
         <div className="content-container box-shadow-8">
           <Image
             className="hero-image | text-center mx-auto"
@@ -36,7 +33,7 @@ export default function HeroElementary({
           <PageHeading
             mainHeading={heroHeadingText}
             secondaryHeading={heroSecondaryHeadingText}
-            decorationImgSrc="/svg/text-divider-4.svg"
+            decorationImgSrc="/svg/text-divider/text-divider-black.svg"
           />
           <Image
             className="frameOrnament frameOrnament-1"

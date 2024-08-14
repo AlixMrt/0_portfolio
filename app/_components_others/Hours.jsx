@@ -14,7 +14,7 @@ export default function Hours() {
   return (
     <section className="section text-center bg-primary-100">
       <div className="container" data-type="full-bleed">
-        <SectionHeader headingText="Hours" displayDecoration />
+        <SectionHeader headingText="Hours" />
 
         <div className="hours ">
           {timetableArray.map((timetableSlot, index) => {

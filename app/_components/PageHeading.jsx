@@ -5,6 +5,7 @@ export default function PageHeading({
   secondaryHeading,
   decorationImgSrc,
 }) {
+  const { definition, city } = secondaryHeading;
   return (
     <div
       className=" page-heading |  hero__inner container center-children fading-out"
@@ -12,10 +13,11 @@ export default function PageHeading({
     >
       <h1 className="heading-1 |  text-center">{mainHeading}</h1>
       <div className="heading-divider"></div>
+      {/* <img src={decorationImgSrc} alt="" /> */}
       <div className="sub-headings">
-        <h2 className="heading-2 ff-base fs-600 text-center">
-          {secondaryHeading}
-        </h2>
+        <p className="heading-4 ff-base text-center">
+          {definition} <br /> {city}
+        </p>
       </div>
     </div>
   );
